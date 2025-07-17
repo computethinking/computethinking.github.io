@@ -1,0 +1,1185 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://computethinking.github.io/turtles/">
+      
+      
+        <link rel="prev" href="../genai/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/cognition_2.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Computational Thinking with Turtles - Computational Thinking</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#computational-thinking-with-turtles" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Computational Thinking" class="md-header__button md-logo" aria-label="Computational Thinking" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3c3.9 0 7 3.1 7 7 0 2.8-1.6 5.2-4 6.3V21H9v-3H8c-1.1 0-2-.9-2-2v-3H4.5c-.4 0-.7-.5-.4-.8L6 9.7C6.2 5.9 9.2 3 13 3m0-2C8.4 1 4.6 4.4 4.1 8.9L2.5 11c-.6.8-.6 1.8-.2 2.6.4.7 1 1.2 1.7 1.3V16c0 1.9 1.3 3.4 3 3.9V23h11v-5.5c2.5-1.7 4-4.4 4-7.5 0-5-4-9-9-9m-3 9c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1m3 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1m3 0c-.5 0-1-.4-1-1s.5-1 1-1 1 .4 1 1-.5 1-1 1"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Computational Thinking
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Computational Thinking with Turtles
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/computethinking/computethinking.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    computethinking/computethinking.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../genai/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Generative AI
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Turtles
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Computational Thinking" class="md-nav__button md-logo" aria-label="Computational Thinking" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3c3.9 0 7 3.1 7 7 0 2.8-1.6 5.2-4 6.3V21H9v-3H8c-1.1 0-2-.9-2-2v-3H4.5c-.4 0-.7-.5-.4-.8L6 9.7C6.2 5.9 9.2 3 13 3m0-2C8.4 1 4.6 4.4 4.1 8.9L2.5 11c-.6.8-.6 1.8-.2 2.6.4.7 1 1.2 1.7 1.3V16c0 1.9 1.3 3.4 3 3.9V23h11v-5.5c2.5-1.7 4-4.4 4-7.5 0-5-4-9-9-9m-3 9c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1m3 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1m3 0c-.5 0-1-.4-1-1s.5-1 1-1 1 .4 1 1-.5 1-1 1"/></svg>
+
+    </a>
+    Computational Thinking
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/computethinking/computethinking.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    computethinking/computethinking.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../genai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Generative AI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Turtles
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Turtles
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-computational-thinking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction to Computational Thinking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-to-familiar-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting to Familiar Concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introducing-the-turtle-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducing the Turtle Problem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refactoring-and-applying-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refactoring and Applying Concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-code-and-wrap-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Code and Wrap-up
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-computational-thinking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction to Computational Thinking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-to-familiar-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting to Familiar Concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introducing-the-turtle-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducing the Turtle Problem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refactoring-and-applying-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refactoring and Applying Concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-code-and-wrap-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Code and Wrap-up
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="computational-thinking-with-turtles">Computational Thinking with Turtles<a class="headerlink" href="#computational-thinking-with-turtles" title="Permanent link">&para;</a></h1>
+<p>In today's technology-driven world, computational thinking is an essential skill for effective leadership, even without requiring you to become a programmer. This lesson demystifies computational thinking, presenting it as a powerful problem-solving framework applicable to various business challenges.</p>
+<p><strong>Learning Objectives:</strong></p>
+<p>By the end of this lesson, you will be able to:</p>
+<ul>
+<li>Define computational thinking and its core concepts: decomposition, abstraction, algorithmic thinking, and pattern recognition.</li>
+<li>Relate these concepts to familiar business practices and scenarios.</li>
+<li>Apply computational thinking to analyze and solve a problem using a simple coding exercise.</li>
+<li>Understand the importance of refactoring and iterative development in creating effective solutions.</li>
+<li>Appreciate the role of computational thinking in user experience design and product development.</li>
+</ul>
+<p><strong>Lesson Overview:</strong></p>
+<ol>
+<li><strong>Introduction to Computational Thinking:</strong> We'll define computational thinking and explore its core concepts, providing relatable examples from the business world.</li>
+<li><strong>Connecting to Familiar Concepts:</strong> You'll engage in a critical thinking exercise to connect computational thinking to your own professional experiences.</li>
+<li><strong>Introducing the Turtle Problem:</strong>  We'll introduce a visual coding exercise using Turtle Graphics to demonstrate the practical application of computational thinking.</li>
+<li><strong>Refactoring and Applying Concepts:</strong>  We'll iteratively refactor the code, highlighting how each step aligns with the principles of computational thinking.</li>
+<li><strong>Complete Code and Wrap-up:</strong> We'll present the final refactored code, emphasizing the key takeaways and the broader relevance of computational thinking for business leaders.</li>
+</ol>
+<p>This lesson provides a practical and engaging introduction to computational thinking, empowering you to apply these valuable skills in your everyday work and strategic decision-making.</p>
+<h3 id="introduction-to-computational-thinking">Introduction to Computational Thinking<a class="headerlink" href="#introduction-to-computational-thinking" title="Permanent link">&para;</a></h3>
+<p>In today's rapidly evolving digital landscape, business leaders need to be equipped with more than just traditional management skills.  Computational thinking, a problem-solving methodology rooted in computer science principles, is becoming increasingly crucial for effective decision-making and navigating the complexities of the modern business world.</p>
+<p>While the term may seem intimidating to those without a technical background, computational thinking is not about coding. It's a mental framework applicable to various challenges, empowering you to approach problems with greater clarity and efficiency.</p>
+<p>This approach involves four key concepts:</p>
+<ul>
+<li>
+<p><strong>Decomposition:</strong>  Consider the process of developing a strategic plan. It would be overwhelming to tackle the entire plan as a single entity. Instead, you would decompose it into smaller, more manageable components, such as market analysis, competitor analysis, and internal resource assessment. This is the essence of decomposition – breaking down complex problems into smaller, more manageable parts.</p>
+</li>
+<li>
+<p><strong>Abstraction:</strong>  An organization chart provides a high-level view of a company's structure, highlighting key roles and reporting relationships without delving into the specifics of each employee's responsibilities. This is abstraction in action – focusing on essential information while filtering out irrelevant details. Financial reports similarly use abstraction to present key performance indicators.</p>
+</li>
+<li>
+<p><strong>Algorithmic Thinking:</strong>  Standard Operating Procedures (SOPs) are a prime example of algorithmic thinking in a business context. They outline a precise sequence of steps to ensure consistency and efficiency in executing tasks.  Essentially, algorithmic thinking involves defining a step-by-step process to achieve a desired outcome.</p>
+</li>
+<li>
+<p><strong>Pattern Recognition:</strong>  Analyzing sales data to identify seasonal trends is a common application of pattern recognition in business. By identifying recurring patterns or trends, you can make more informed decisions about inventory management, marketing campaigns, and other strategic initiatives. Market research relies heavily on pattern recognition to understand consumer behavior.</p>
+</li>
+</ul>
+<p>By mastering these concepts, you can enhance your problem-solving abilities, even without writing any code. Computational thinking helps you:</p>
+<ul>
+<li><strong>Analyze problems systematically</strong></li>
+<li><strong>Identify core issues</strong></li>
+<li><strong>Develop effective solutions</strong></li>
+<li><strong>Communicate solutions clearly and concisely</strong></li>
+</ul>
+<p>In the following sections, we will delve deeper into each of these concepts, exploring their practical applications in various business scenarios.</p>
+<h3 id="connecting-to-familiar-concepts">Connecting to Familiar Concepts<a class="headerlink" href="#connecting-to-familiar-concepts" title="Permanent link">&para;</a></h3>
+<p><strong>Critical Thinking Exercise:</strong></p>
+<p>Now that you've been introduced to the four pillars of computational thinking – decomposition, abstraction, algorithmic thinking, and pattern recognition – let's explore how these concepts connect to your existing knowledge and experience in the business world.</p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li><strong>Reflect:</strong> Take a moment to consider your typical work tasks and responsibilities.</li>
+<li><strong>Analyze:</strong>  Identify specific instances where you have already applied elements of computational thinking, even without realizing it.</li>
+<li><strong>Document:</strong>  For each of the four concepts, write down at least one concrete example from your professional experience that demonstrates its application.</li>
+</ol>
+<p><strong>Tips for Success:</strong></p>
+<ul>
+<li><strong>Think broadly:</strong> Computational thinking isn't limited to technology-related tasks. Consider how you approach problem-solving, decision-making, and process optimization in general.</li>
+<li><strong>Be specific:</strong>  Instead of general statements, provide detailed examples with context.</li>
+<li><strong>Consider different aspects of your work:</strong>  Think about strategic planning, project management, data analysis, communication, and even routine tasks.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>Let's say you're responsible for launching a new product. Here's how you might apply computational thinking:</p>
+<ul>
+<li><strong>Decomposition:</strong> Break down the launch into smaller phases (market research, product development, marketing campaign, sales strategy, etc.).</li>
+<li><strong>Abstraction:</strong>  Create a high-level timeline or Gantt chart that focuses on key milestones without getting bogged down in every minor detail.</li>
+<li><strong>Algorithmic Thinking:</strong> Develop a checklist or workflow for the launch process to ensure consistency and efficiency.</li>
+<li><strong>Pattern Recognition:</strong> Analyze data from previous product launches to identify successful strategies and potential pitfalls.</li>
+</ul>
+<p>By completing this exercise, you'll gain a deeper understanding of how computational thinking is already embedded in many business practices. This awareness will help you consciously apply these concepts to become a more effective and efficient leader.</p>
+<h3 id="introducing-the-turtle-problem">Introducing the Turtle Problem<a class="headerlink" href="#introducing-the-turtle-problem" title="Permanent link">&para;</a></h3>
+<p>In this section, we'll transition from theory to practice. We'll use a simple programming environment called "Turtle Graphics" to illustrate how computational thinking can be applied to create something visual and dynamic.</p>
+<blockquote>
+<p>Source</p>
+<p>The original code comes from the GitHub repository of the <a href="https://github.com/mathriddle/ColabTurtlePlus/">ColabTurtlePlus</a>. The repository contains excellent set of <a href="https://github.com/mathriddle/ColabTurtlePlus/tree/main/examples_version2">examples</a> that can be analyzed and extended for challenge assignment for Module 1. Make sure to reference the code you use for the assignment.</p>
+</blockquote>
+<p><a class="glightbox" href="../assets/images/turtle_stars.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Stars" src="../assets/images/turtle_stars.png" /></a></p>
+<p>Now, let's take a look at the code that generates these patterns:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ColabTurtlePlus.Turtle</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">clearscreen</span><span class="p">()</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">setup</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="mi">300</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">T</span> <span class="o">=</span> <span class="n">Turtle</span><span class="p">()</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">T</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">T</span><span class="o">.</span><span class="n">speed</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">T</span><span class="o">.</span><span class="n">width</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">S</span> <span class="o">=</span> <span class="n">T</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">T</span><span class="o">.</span><span class="n">fillrule</span><span class="p">(</span><span class="s2">&quot;evenodd&quot;</span><span class="p">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">S</span><span class="o">.</span><span class="n">fillrule</span><span class="p">(</span><span class="s2">&quot;nonzero&quot;</span><span class="p">)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">x0</span> <span class="o">=</span> <span class="o">-</span><span class="mi">225</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">T</span><span class="o">.</span><span class="n">jumpto</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">S</span><span class="o">.</span><span class="n">jumpto</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">T</span><span class="o">.</span><span class="n">begin_fill</span><span class="p">()</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">S</span><span class="o">.</span><span class="n">begin_fill</span><span class="p">()</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="n">T</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="n">T</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">170</span><span class="p">)</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="n">S</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="n">S</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">170</span><span class="p">)</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">getx</span><span class="p">()</span><span class="o">-</span><span class="n">x0</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">T</span><span class="o">.</span><span class="n">gety</span><span class="p">()</span><span class="o">**</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        <span class="k">break</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="n">T</span><span class="o">.</span><span class="n">end_fill</span><span class="p">()</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="n">S</span><span class="o">.</span><span class="n">end_fill</span><span class="p">()</span>
+</span></code></pre></div>
+<details>
+<summary>Annotated version of the code</summary>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Import the necessary library for turtle graphics.</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ColabTurtlePlus.Turtle</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Clear the screen to start fresh.</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">clearscreen</span><span class="p">()</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Set up the drawing area with a width of 500 pixels and a height of 300 pixels.</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">setup</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="mi">300</span><span class="p">)</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># Create a turtle object and name it &#39;T&#39;. This is like your pen for drawing.</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">T</span> <span class="o">=</span> <span class="n">Turtle</span><span class="p">()</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c1"># Set the turtle&#39;s color. The first color is for the line, the second for filling shapes.</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">T</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">)</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c1"># Set the turtle&#39;s drawing speed. 13 is quite fast.</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">T</span><span class="o">.</span><span class="n">speed</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="c1"># Set the width of the line the turtle draws.</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="n">T</span><span class="o">.</span><span class="n">width</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="c1"># Create a clone of the first turtle, named &#39;S&#39;. Now we have two &#39;pens&#39;!</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="n">S</span> <span class="o">=</span> <span class="n">T</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="c1"># This determines how overlapping shapes are filled. </span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="c1"># &quot;evenodd&quot; means areas overlapped an odd number of times are filled, </span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="c1"># &quot;nonzero&quot; means any overlapped area is filled.</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="n">T</span><span class="o">.</span><span class="n">fillrule</span><span class="p">(</span><span class="s2">&quot;evenodd&quot;</span><span class="p">)</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="n">S</span><span class="o">.</span><span class="n">fillrule</span><span class="p">(</span><span class="s2">&quot;nonzero&quot;</span><span class="p">)</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="c1"># Set a starting x-coordinate.</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="n">x0</span> <span class="o">=</span> <span class="o">-</span><span class="mi">225</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="c1"># Move the turtles to their starting positions without drawing a line.</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="n">T</span><span class="o">.</span><span class="n">jumpto</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="n">S</span><span class="o">.</span><span class="n">jumpto</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="c1"># Start filling the shapes the turtles are about to draw.</span>
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="n">T</span><span class="o">.</span><span class="n">begin_fill</span><span class="p">()</span>
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="n">S</span><span class="o">.</span><span class="n">begin_fill</span><span class="p">()</span>
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="c1"># This loop makes the turtles draw until a condition is met.</span>
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>    <span class="c1"># Move the turtle &#39;T&#39; forward 200 pixels.</span>
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>    <span class="n">T</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>    <span class="c1"># Turn the turtle &#39;T&#39; left by 170 degrees.</span>
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>    <span class="n">T</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">170</span><span class="p">)</span>
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>    <span class="c1"># Move the turtle &#39;S&#39; forward 200 pixels.</span>
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>    <span class="n">S</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>    <span class="c1"># Turn the turtle &#39;S&#39; left by 170 degrees.</span>
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>    <span class="n">S</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">170</span><span class="p">)</span>
+</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>    <span class="c1"># This checks if the turtle &#39;T&#39; is back near its starting point. </span>
+</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>    <span class="c1"># It uses a bit of math (Pythagorean theorem) to calculate the distance.</span>
+</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">getx</span><span class="p">()</span><span class="o">-</span><span class="n">x0</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">T</span><span class="o">.</span><span class="n">gety</span><span class="p">()</span><span class="o">**</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>        <span class="c1"># If the turtle is close enough, exit the loop.</span>
+</span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>        <span class="k">break</span>
+</span><span id="__span-1-57"><a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>
+</span><span id="__span-1-58"><a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="c1"># Stop filling the shapes.</span>
+</span><span id="__span-1-59"><a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a><span class="n">T</span><span class="o">.</span><span class="n">end_fill</span><span class="p">()</span>
+</span><span id="__span-1-60"><a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="n">S</span><span class="o">.</span><span class="n">end_fill</span><span class="p">()</span>
+</span></code></pre></div>
+</details>
+<p>Don't worry if it looks like gibberish right now! We'll break it down step-by-step in the following sections. </p>
+<p><strong>The Challenge:</strong></p>
+<p>Your challenge is to understand this code and then modify it to create your own unique patterns. This will involve applying the concepts of computational thinking we've discussed:</p>
+<ul>
+<li><strong>Decomposition:</strong> How can you break down this code into smaller, more manageable parts?</li>
+</ul>
+<details>
+  <summary>Click to reveal answer</summary>
+  <blockquote class="highlight" style="margin-left: 2rem;">
+<p>You can decompose this code by identifying distinct blocks of functionality:</p>
+<ul>
+  <li><strong>Setup:</strong> The lines that import the library, clear the screen, and set up the drawing area (<code>from ColabTurtlePlus...</code>, <code>clearscreen()</code>, <code>setup()</code>).</li>
+  <li><strong>Turtle Initialization:</strong> The lines that create the turtle objects and set their properties (<code>T = Turtle()</code>, <code>T.color()</code>, <code>T.speed()</code>, etc.).</li>
+  <li><strong>Movement and Drawing:</strong> The <code>while True</code> loop that contains the instructions for the turtles to move and turn.</li>
+  <li><strong>Filling:</strong> The lines that start and end the filling of the shapes (<code>T.begin_fill()</code>, <code>T.end_fill()</code>).</li>
+</ul>
+<p>By separating these parts, you can focus on understanding and modifying each piece individually.</p>
+</blockquote>
+</details>
+
+<ul>
+<li><strong>Abstraction:</strong> Can you identify any elements that are abstracted away or hidden from the user?</li>
+</ul>
+<details>
+  <summary>Click to reveal answer</summary>
+<blockquote class="highlight" style="margin-left: 2rem;">
+
+  <p>Yes, several elements are abstracted in this code:</p>
+<ul>
+  <li><strong>Turtle commands:</strong> Commands like <code>forward()</code>, <code>left()</code>, and <code>jumpto()</code> abstract away the complex mathematics involved in moving and drawing on the screen. You don't need to know trigonometry or geometry to use them.</li>
+  <li><strong>Library functions:</strong> The functions provided by the <code>ColabTurtlePlus.Turtle</code> library abstract away the lower-level code that interacts with the computer's graphics system.</li>
+  <li><strong>Fill rule:</strong> The <code>fillrule</code> option abstracts the complexities of how overlapping shapes are filled.</li>
+</ul>
+<p>Abstraction simplifies the code, allowing you to focus on the desired outcome without getting bogged down in the underlying implementation details.</p>
+</blockquote>
+</details>
+
+<ul>
+<li><strong>Algorithmic Thinking:</strong> What is the core algorithm that generates the pattern?</li>
+</ul>
+<details>
+  <summary>Click to reveal answer</summary>
+  <blockquote class="highlight" style="margin-left: 2rem;">
+
+<p>The core algorithm is within the <code>while True</code> loop:</p>
+<ol>
+  <li>Move the turtle forward by a certain distance (<code>T.forward(200)</code>).</li>
+  <li>Turn the turtle left by a certain angle (<code>T.left(170)</code>).</li>
+  <li>Repeat these steps until the turtle returns to its starting position.</li>
+</ol>
+<p>This simple algorithm, when executed repeatedly, generates the complex spiral patterns.</p>
+</blockquote>
+</details>
+
+<ul>
+<li><strong>Pattern Recognition:</strong> Can you identify any patterns in the code itself, and how do those patterns translate into the visual output?</li>
+</ul>
+<details>
+  <summary>Click to reveal answer</summary>
+<blockquote class="highlight" style="margin-left: 2rem;">
+<p>The most obvious pattern is the repetition of the <code>forward()</code> and <code>left()</code> commands within the loop. This repetition creates the spiral shape.</p>
+<p>The specific values used for distance and angle determine the tightness and overall form of the spiral. Experimenting with these values will result in different visual patterns.</p>
+<p>By recognizing these patterns in the code, you can predict how changes to the code will affect the visual output.</p>
+</blockquote>
+</details>
+
+<h3 id="refactoring-and-applying-concepts">Refactoring and Applying Concepts<a class="headerlink" href="#refactoring-and-applying-concepts" title="Permanent link">&para;</a></h3>
+<p>Now it's time to roll up our sleeves and get hands-on with the code! We'll take the turtle graphics program and refactor it step-by-step. Remember that refactoring simply means improving the code's structure and readability without changing its functionality.  In the real world, code is rarely perfect from the start. We engage in continuous development, iteratively refining and improving it. Sometimes, the areas that need improvement aren't obvious. Just as in business, we experiment with changes and rely on data to guide our decisions. A/B testing helps us understand user preferences for user-facing changes, while performance testing guides optimizations for speed and efficiency. With each iteration, we'll see how computational thinking principles guide our refactoring decisions.</p>
+<p><strong>Iteration 1: Identifying the Algorithm</strong></p>
+<p>Let's revisit the code:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ColabTurtlePlus.Turtle</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">clearscreen</span><span class="p">()</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">setup</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="mi">300</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">T</span> <span class="o">=</span> <span class="n">Turtle</span><span class="p">()</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">T</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">)</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">T</span><span class="o">.</span><span class="n">speed</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">T</span><span class="o">.</span><span class="n">width</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">S</span> <span class="o">=</span> <span class="n">T</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">T</span><span class="o">.</span><span class="n">fillrule</span><span class="p">(</span><span class="s2">&quot;evenodd&quot;</span><span class="p">)</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">S</span><span class="o">.</span><span class="n">fillrule</span><span class="p">(</span><span class="s2">&quot;nonzero&quot;</span><span class="p">)</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">x0</span> <span class="o">=</span> <span class="o">-</span><span class="mi">225</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">T</span><span class="o">.</span><span class="n">jumpto</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="n">S</span><span class="o">.</span><span class="n">jumpto</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="n">T</span><span class="o">.</span><span class="n">begin_fill</span><span class="p">()</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="n">S</span><span class="o">.</span><span class="n">begin_fill</span><span class="p">()</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    <span class="n">T</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    <span class="n">T</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">170</span><span class="p">)</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    <span class="n">S</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    <span class="n">S</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">170</span><span class="p">)</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">getx</span><span class="p">()</span><span class="o">-</span><span class="n">x0</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">T</span><span class="o">.</span><span class="n">gety</span><span class="p">()</span><span class="o">**</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>        <span class="k">break</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="n">T</span><span class="o">.</span><span class="n">end_fill</span><span class="p">()</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="n">S</span><span class="o">.</span><span class="n">end_fill</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Can you spot the core algorithm that generates the spiral pattern?</p>
+<details>
+  <summary>Click to reveal answer</summary>
+<blockquote class="highlight">
+  <p>It's the <code>while True</code> loop! This loop repeatedly instructs the turtles to move forward and turn left, creating the spiral shape.</p>
+  <pre><code>while True:
+      T.forward(200)
+      T.left(170)
+      S.forward(200)
+      S.left(170)
+      if (T.getx()-x0)**2 + T.gety()**2 &lt; 1:
+          break
+  </code></pre>
+  <p>This is <strong>algorithmic thinking</strong> in action - defining a precise sequence of steps to achieve a desired outcome.</p>
+</blockquote>
+</details>
+
+<p><strong>Iteration 2: Abstraction with a Function</strong></p>
+<p>To make the code more organized and reusable, let's encapsulate this algorithm within a function:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">draw_spiral</span><span class="p">(</span><span class="n">turtle_obj</span><span class="p">,</span> <span class="n">step_size</span><span class="p">,</span> <span class="n">angle</span><span class="p">):</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  <span class="n">x0</span> <span class="o">=</span> <span class="n">turtle_obj</span><span class="o">.</span><span class="n">getx</span><span class="p">()</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  <span class="n">turtle_obj</span><span class="o">.</span><span class="n">begin_fill</span><span class="p">()</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>      <span class="n">turtle_obj</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">step_size</span><span class="p">)</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>      <span class="n">turtle_obj</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">turtle_obj</span><span class="o">.</span><span class="n">getx</span><span class="p">()</span> <span class="o">-</span> <span class="n">x0</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">turtle_obj</span><span class="o">.</span><span class="n">gety</span><span class="p">()</span><span class="o">**</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>          <span class="k">break</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>  <span class="n">turtle_obj</span><span class="o">.</span><span class="n">end_fill</span><span class="p">()</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="c1"># Now you can use the function like this:</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="n">draw_spiral</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">170</span><span class="p">)</span>  <span class="c1"># For turtle T</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="n">draw_spiral</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">170</span><span class="p">)</span>  <span class="c1"># For turtle S </span>
+</span></code></pre></div>
+<p>What have we achieved here?</p>
+<details>
+  <summary>Click to reveal answer</summary>
+<blockquote class="highlight">
+  <p>We've created an <strong>abstraction</strong>! The <code>draw_spiral()</code> function hides the complexity of the algorithm. Now, someone using this function doesn't need to understand the details of the loop or the math involved. They can simply call the function with the desired parameters: the turtle object, step size, and angle.</p>
+  <p>This is similar to using a function in a spreadsheet software. You don't need to know the formula behind <code>SUM()</code> or <code>AVERAGE()</code>, you just need to know what inputs it requires.</p>
+</blockquote>
+</details>
+
+<p><strong>Iteration 3: Abstraction and Progressive Disclosure with Default Arguments</strong></p>
+<p>In the previous iteration, we abstracted the spiral drawing logic into a function. Now, let's further simplify the code by creating a function to set up our turtles:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">create_turtle</span><span class="p">(</span><span class="n">color1</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">color2</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">speed</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">fillrule</span><span class="o">=</span><span class="s2">&quot;evenodd&quot;</span><span class="p">):</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="sd">  Creates a turtle object with specified properties.</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="sd">  Args:</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="sd">    color1: The color of the turtle&#39;s pen.</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="sd">    color2: The fill color of the turtle.</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="sd">    speed: The drawing speed of the turtle.</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="sd">    width: The width of the turtle&#39;s pen.</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="sd">    fillrule: The fill rule for the turtle.</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="sd">  Returns:</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="sd">    A Turtle object with the specified properties.</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="sd">  &quot;&quot;&quot;</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>  <span class="n">T</span> <span class="o">=</span> <span class="n">Turtle</span><span class="p">()</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>  <span class="n">T</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="n">color1</span><span class="p">,</span> <span class="n">color2</span><span class="p">)</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>  <span class="n">T</span><span class="o">.</span><span class="n">speed</span><span class="p">(</span><span class="n">speed</span><span class="p">)</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>  <span class="n">T</span><span class="o">.</span><span class="n">width</span><span class="p">(</span><span class="n">width</span><span class="p">)</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>  <span class="n">T</span><span class="o">.</span><span class="n">fillrule</span><span class="p">(</span><span class="n">fillrule</span><span class="p">)</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>  <span class="k">return</span> <span class="n">T</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="c1"># Now you can create turtles like this:</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="n">T1</span> <span class="o">=</span> <span class="n">create_turtle</span><span class="p">()</span>  <span class="c1"># Uses all default values</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="n">T2</span> <span class="o">=</span> <span class="n">create_turtle</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">fillrule</span><span class="o">=</span><span class="s2">&quot;nonzero&quot;</span><span class="p">)</span>  <span class="c1"># Overrides some defaults</span>
+</span></code></pre></div>
+<p>Notice how we've provided default values for all the arguments in the <code>create_turtle()</code> function. This allows users to create a turtle with the standard settings by simply calling the function without any arguments (<code>T1 = create_turtle()</code>).  However, if they need to customize the turtle's properties, they can provide specific values for any of the arguments, like we did for <code>T2</code>.</p>
+<p>This demonstrates two important concepts:</p>
+<ul>
+<li><strong>Abstraction:</strong>  The function hides the details of creating and configuring a turtle object, making the code cleaner and easier to use.</li>
+<li><strong>Progressive Disclosure:</strong>  By providing default values, we simplify the initial interaction for users. They don't need to be overwhelmed with all the possible options right away. They can start with the defaults and then progressively explore more advanced customizations as needed.</li>
+</ul>
+<p>This principle of progressive disclosure is widely used in software design. Think about the settings menu on your phone. The most commonly used settings are readily accessible, while more advanced options are tucked away in submenus. This makes the user experience less daunting and more efficient.</p>
+<p>By using default arguments in our code, we're applying the same principle, making it easier for others (or even our future selves) to use and understand our code.</p>
+<p><strong>Iteration 4: Decomposition for Clarity</strong></p>
+<p>Let's break down the setup and drawing actions into separate functions:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">create_turtle</span><span class="p">(</span><span class="n">color1</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">color2</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">speed</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">fillrule</span><span class="o">=</span><span class="s2">&quot;evenodd&quot;</span><span class="p">):</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="sd">&quot;&quot;&quot;Creates a turtle object with specified properties.&quot;&quot;&quot;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  <span class="n">T</span> <span class="o">=</span> <span class="n">Turtle</span><span class="p">()</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>  <span class="n">T</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="n">color1</span><span class="p">,</span> <span class="n">color2</span><span class="p">)</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>  <span class="n">T</span><span class="o">.</span><span class="n">speed</span><span class="p">(</span><span class="n">speed</span><span class="p">)</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>  <span class="n">T</span><span class="o">.</span><span class="n">width</span><span class="p">(</span><span class="n">width</span><span class="p">)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>  <span class="n">T</span><span class="o">.</span><span class="n">fillrule</span><span class="p">(</span><span class="n">fillrule</span><span class="p">)</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>  <span class="k">return</span> <span class="n">T</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="k">def</span><span class="w"> </span><span class="nf">draw_spirals</span><span class="p">(</span><span class="n">turtle1</span><span class="p">,</span> <span class="n">turtle2</span><span class="p">,</span> <span class="n">step_size</span><span class="p">,</span> <span class="n">angle</span><span class="p">):</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">  </span><span class="sd">&quot;&quot;&quot;Sets up two turtles and draws spirals with them.&quot;&quot;&quot;</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>  <span class="n">x0</span> <span class="o">=</span> <span class="o">-</span><span class="mi">225</span>  <span class="c1"># Set a starting x-coordinate</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>  <span class="n">turtle1</span><span class="o">.</span><span class="n">jumpto</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>  <span class="n">turtle2</span><span class="o">.</span><span class="n">jumpto</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>  <span class="n">draw_spiral</span><span class="p">(</span><span class="n">turtle1</span><span class="p">,</span> <span class="n">step_size</span><span class="p">,</span> <span class="n">angle</span><span class="p">)</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>  <span class="n">draw_spiral</span><span class="p">(</span><span class="n">turtle2</span><span class="p">,</span> <span class="n">step_size</span><span class="p">,</span> <span class="n">angle</span><span class="p">)</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="c1"># Now the main part of the program becomes very concise:</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="n">clearscreen</span><span class="p">()</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="n">setup</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="n">T1</span> <span class="o">=</span> <span class="n">create_turtle</span><span class="p">()</span>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="n">T2</span> <span class="o">=</span> <span class="n">create_turtle</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">fillrule</span><span class="o">=</span><span class="s2">&quot;nonzero&quot;</span><span class="p">)</span>
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="n">draw_spirals</span><span class="p">(</span><span class="n">T1</span><span class="p">,</span> <span class="n">T2</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">170</span><span class="p">)</span> 
+</span></code></pre></div>
+<p>By decomposing the code into these functions, we've made it:</p>
+<ul>
+<li><strong>More Modular:</strong> Each function performs a specific task, making the code easier to understand and maintain.</li>
+<li><strong>More Reusable:</strong>  The <code>create_turtle()</code> function can be used to create turtles with different properties throughout the program.</li>
+<li><strong>More Readable:</strong> The main part of the program now clearly shows the high-level steps: create turtles, draw spirals.</li>
+</ul>
+<p>This refactoring highlights how decomposition can be used to organize and simplify complex tasks, a principle that applies not only to coding but also to various business processes.  It also shows how breaking down a problem into smaller parts can make it easier to manage and solve, a key aspect of computational thinking.</p>
+<p><strong>Iteration 5: Data Structuring and Tuple Unpacking</strong></p>
+<p>Let's say we want to draw two spirals with different properties (step size and angle). We can group the relevant data for each spiral using tuples.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">create_turtle</span><span class="p">(</span><span class="n">color1</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">color2</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">speed</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">fillrule</span><span class="o">=</span><span class="s2">&quot;evenodd&quot;</span><span class="p">):</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="sd">&quot;&quot;&quot;Creates a turtle object with specified properties.&quot;&quot;&quot;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>  <span class="n">T</span> <span class="o">=</span> <span class="n">Turtle</span><span class="p">()</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>  <span class="n">T</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="n">color1</span><span class="p">,</span> <span class="n">color2</span><span class="p">)</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>  <span class="n">T</span><span class="o">.</span><span class="n">speed</span><span class="p">(</span><span class="n">speed</span><span class="p">)</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>  <span class="n">T</span><span class="o">.</span><span class="n">width</span><span class="p">(</span><span class="n">width</span><span class="p">)</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>  <span class="n">T</span><span class="o">.</span><span class="n">fillrule</span><span class="p">(</span><span class="n">fillrule</span><span class="p">)</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>  <span class="k">return</span> <span class="n">T</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="k">def</span><span class="w"> </span><span class="nf">draw_spirals</span><span class="p">(</span><span class="n">turtle1_data</span><span class="p">,</span> <span class="n">turtle2_data</span><span class="p">):</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">  </span><span class="sd">&quot;&quot;&quot;Sets up two turtles and draws spirals with them.&quot;&quot;&quot;</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>  <span class="n">x0</span> <span class="o">=</span> <span class="o">-</span><span class="mi">225</span>  <span class="c1"># Set a starting x-coordinate</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>  <span class="n">turtle1</span><span class="p">,</span> <span class="n">step_size1</span><span class="p">,</span> <span class="n">angle1</span> <span class="o">=</span> <span class="n">turtle1_data</span>  <span class="c1"># Unpack the tuple</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>  <span class="n">turtle2</span><span class="p">,</span> <span class="n">step_size2</span><span class="p">,</span> <span class="n">angle2</span> <span class="o">=</span> <span class="n">turtle2_data</span>  <span class="c1"># Unpack the tuple</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>  <span class="n">turtle1</span><span class="o">.</span><span class="n">jumpto</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>  <span class="n">turtle2</span><span class="o">.</span><span class="n">jumpto</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>  <span class="n">draw_spiral</span><span class="p">(</span><span class="n">turtle1</span><span class="p">,</span> <span class="n">step_size1</span><span class="p">,</span> <span class="n">angle1</span><span class="p">)</span>  <span class="c1"># Call with unpacked values</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>  <span class="n">draw_spiral</span><span class="p">(</span><span class="n">turtle2</span><span class="p">,</span> <span class="n">step_size2</span><span class="p">,</span> <span class="n">angle2</span><span class="p">)</span>  <span class="c1"># Call with unpacked values</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="k">def</span><span class="w"> </span><span class="nf">draw_spiral</span><span class="p">(</span><span class="n">turtle_obj</span><span class="p">,</span> <span class="n">step_size</span><span class="p">,</span> <span class="n">angle</span><span class="p">):</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">  </span><span class="sd">&quot;&quot;&quot;Draws a spiral with the given turtle object.&quot;&quot;&quot;</span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>  <span class="n">x0</span> <span class="o">=</span> <span class="n">turtle_obj</span><span class="o">.</span><span class="n">getx</span><span class="p">()</span>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>  <span class="n">turtle_obj</span><span class="o">.</span><span class="n">begin_fill</span><span class="p">()</span>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>  <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>      <span class="n">turtle_obj</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">step_size</span><span class="p">)</span>
+</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>      <span class="n">turtle_obj</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+</span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">turtle_obj</span><span class="o">.</span><span class="n">getx</span><span class="p">()</span> <span class="o">-</span> <span class="n">x0</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">turtle_obj</span><span class="o">.</span><span class="n">gety</span><span class="p">()</span><span class="o">**</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="__span-6-28"><a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>          <span class="k">break</span>
+</span><span id="__span-6-29"><a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>  <span class="n">turtle_obj</span><span class="o">.</span><span class="n">end_fill</span><span class="p">()</span>
+</span><span id="__span-6-30"><a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>
+</span><span id="__span-6-31"><a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a><span class="c1"># Now the main part of the program:</span>
+</span><span id="__span-6-32"><a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="n">clearscreen</span><span class="p">()</span>
+</span><span id="__span-6-33"><a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="n">setup</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+</span><span id="__span-6-34"><a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a>
+</span><span id="__span-6-35"><a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a><span class="n">T1</span> <span class="o">=</span> <span class="n">create_turtle</span><span class="p">()</span>
+</span><span id="__span-6-36"><a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a><span class="n">T2</span> <span class="o">=</span> <span class="n">create_turtle</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">fillrule</span><span class="o">=</span><span class="s2">&quot;nonzero&quot;</span><span class="p">)</span>
+</span><span id="__span-6-37"><a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a>
+</span><span id="__span-6-38"><a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a><span class="c1"># Create tuples to store turtle data</span>
+</span><span id="__span-6-39"><a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a><span class="n">turtle1_data</span> <span class="o">=</span> <span class="p">(</span><span class="n">T1</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">170</span><span class="p">)</span>  
+</span><span id="__span-6-40"><a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a><span class="n">turtle2_data</span> <span class="o">=</span> <span class="p">(</span><span class="n">T2</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>  
+</span><span id="__span-6-41"><a id="__codelineno-6-41" name="__codelineno-6-41" href="#__codelineno-6-41"></a>
+</span><span id="__span-6-42"><a id="__codelineno-6-42" name="__codelineno-6-42" href="#__codelineno-6-42"></a><span class="n">draw_spirals</span><span class="p">(</span><span class="n">turtle1_data</span><span class="p">,</span> <span class="n">turtle2_data</span><span class="p">)</span>
+</span></code></pre></div>
+<ul>
+<li>We create tuples (<code>turtle1_data</code>, <code>turtle2_data</code>) to store the turtle object, step size, and angle together. This helps organize related data.</li>
+<li>In <code>draw_spirals</code>, we use tuple unpacking to assign the individual elements of the tuples to separate variables.</li>
+<li>When calling <code>draw_spiral</code>, we pass these unpacked values as arguments.</li>
+</ul>
+<p>This demonstrates:</p>
+<ul>
+<li><strong>Data Structuring:</strong> Using tuples to group related data.</li>
+<li><strong>Tuple Unpacking:</strong>  A convenient way to access elements of a tuple.</li>
+<li><strong>Decomposition:</strong>  The <code>draw_spirals</code> function now clearly decomposes the task of drawing two spirals with different properties by calling the <code>draw_spiral</code> function twice with different parameters.</li>
+</ul>
+<h3 id="complete-code-and-wrap-up">Complete Code and Wrap-up<a class="headerlink" href="#complete-code-and-wrap-up" title="Permanent link">&para;</a></h3>
+<p>Throughout this lesson, we've explored the core concepts of computational thinking – decomposition, abstraction, algorithmic thinking, and pattern recognition – and applied them to refactor a simple turtle graphics program.  Let's take a look at the final version of the code:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ColabTurtlePlus.Turtle</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">create_turtle</span><span class="p">(</span><span class="n">color1</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">color2</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">speed</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">fillrule</span><span class="o">=</span><span class="s2">&quot;evenodd&quot;</span><span class="p">):</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="sd">&quot;&quot;&quot;Creates a turtle object with specified properties.&quot;&quot;&quot;</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>  <span class="n">T</span> <span class="o">=</span> <span class="n">Turtle</span><span class="p">()</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>  <span class="n">T</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="n">color1</span><span class="p">,</span> <span class="n">color2</span><span class="p">)</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>  <span class="n">T</span><span class="o">.</span><span class="n">speed</span><span class="p">(</span><span class="n">speed</span><span class="p">)</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>  <span class="n">T</span><span class="o">.</span><span class="n">width</span><span class="p">(</span><span class="n">width</span><span class="p">)</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>  <span class="n">T</span><span class="o">.</span><span class="n">fillrule</span><span class="p">(</span><span class="n">fillrule</span><span class="p">)</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>  <span class="k">return</span> <span class="n">T</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="k">def</span><span class="w"> </span><span class="nf">draw_spirals</span><span class="p">(</span><span class="n">turtle1_data</span><span class="p">,</span> <span class="n">turtle2_data</span><span class="p">):</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">  </span><span class="sd">&quot;&quot;&quot;Sets up two turtles and draws spirals with them.&quot;&quot;&quot;</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>  <span class="n">x0</span> <span class="o">=</span> <span class="o">-</span><span class="mi">225</span>  <span class="c1"># Set a starting x-coordinate</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>  <span class="n">turtle1</span><span class="p">,</span> <span class="n">step_size1</span><span class="p">,</span> <span class="n">angle1</span> <span class="o">=</span> <span class="n">turtle1_data</span>  <span class="c1"># Unpack the tuple</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>  <span class="n">turtle2</span><span class="p">,</span> <span class="n">step_size2</span><span class="p">,</span> <span class="n">angle2</span> <span class="o">=</span> <span class="n">turtle2_data</span>  <span class="c1"># Unpack the tuple</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>  <span class="n">turtle1</span><span class="o">.</span><span class="n">jumpto</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>  <span class="n">turtle2</span><span class="o">.</span><span class="n">jumpto</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>  <span class="n">draw_spiral</span><span class="p">(</span><span class="n">turtle1</span><span class="p">,</span> <span class="n">step_size1</span><span class="p">,</span> <span class="n">angle1</span><span class="p">)</span>  <span class="c1"># Call with unpacked values</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>  <span class="n">draw_spiral</span><span class="p">(</span><span class="n">turtle2</span><span class="p">,</span> <span class="n">step_size2</span><span class="p">,</span> <span class="n">angle2</span><span class="p">)</span>  <span class="c1"># Call with unpacked values</span>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="k">def</span><span class="w"> </span><span class="nf">draw_spiral</span><span class="p">(</span><span class="n">turtle_obj</span><span class="p">,</span> <span class="n">step_size</span><span class="p">,</span> <span class="n">angle</span><span class="p">):</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">  </span><span class="sd">&quot;&quot;&quot;Draws a spiral with the given turtle object.&quot;&quot;&quot;</span>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>  <span class="n">x0</span> <span class="o">=</span> <span class="n">turtle_obj</span><span class="o">.</span><span class="n">getx</span><span class="p">()</span>
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>  <span class="n">turtle_obj</span><span class="o">.</span><span class="n">begin_fill</span><span class="p">()</span>
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>  <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>      <span class="n">turtle_obj</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">step_size</span><span class="p">)</span>
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>      <span class="n">turtle_obj</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+</span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">turtle_obj</span><span class="o">.</span><span class="n">getx</span><span class="p">()</span> <span class="o">-</span> <span class="n">x0</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">turtle_obj</span><span class="o">.</span><span class="n">gety</span><span class="p">()</span><span class="o">**</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="__span-7-30"><a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>          <span class="k">break</span>
+</span><span id="__span-7-31"><a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>  <span class="n">turtle_obj</span><span class="o">.</span><span class="n">end_fill</span><span class="p">()</span>
+</span><span id="__span-7-32"><a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a>
+</span><span id="__span-7-33"><a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a><span class="c1"># Main part of the program:</span>
+</span><span id="__span-7-34"><a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a><span class="n">clearscreen</span><span class="p">()</span>
+</span><span id="__span-7-35"><a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a><span class="n">setup</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+</span><span id="__span-7-36"><a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a>
+</span><span id="__span-7-37"><a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a><span class="n">T1</span> <span class="o">=</span> <span class="n">create_turtle</span><span class="p">()</span>
+</span><span id="__span-7-38"><a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a><span class="n">T2</span> <span class="o">=</span> <span class="n">create_turtle</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">fillrule</span><span class="o">=</span><span class="s2">&quot;nonzero&quot;</span><span class="p">)</span>
+</span><span id="__span-7-39"><a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a>
+</span><span id="__span-7-40"><a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a><span class="c1"># Create tuples to store turtle data</span>
+</span><span id="__span-7-41"><a id="__codelineno-7-41" name="__codelineno-7-41" href="#__codelineno-7-41"></a><span class="n">turtle1_data</span> <span class="o">=</span> <span class="p">(</span><span class="n">T1</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">170</span><span class="p">)</span>  
+</span><span id="__span-7-42"><a id="__codelineno-7-42" name="__codelineno-7-42" href="#__codelineno-7-42"></a><span class="n">turtle2_data</span> <span class="o">=</span> <span class="p">(</span><span class="n">T2</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>  
+</span><span id="__span-7-43"><a id="__codelineno-7-43" name="__codelineno-7-43" href="#__codelineno-7-43"></a>
+</span><span id="__span-7-44"><a id="__codelineno-7-44" name="__codelineno-7-44" href="#__codelineno-7-44"></a><span class="n">draw_spirals</span><span class="p">(</span><span class="n">turtle1_data</span><span class="p">,</span> <span class="n">turtle2_data</span><span class="p">)</span>
+</span></code></pre></div>
+<blockquote>
+<p>Lesson Colab Notebook</p>
+<p>The interactive notebook version of this code is available on the course <a href="https://github.com/computational-thinking-4-business/computational-thinking-4-business.github.io/tree/main/notebooks">GitHub Repository</a>.</p>
+</blockquote>
+<p><strong>Connecting to Foundational Concepts:</strong></p>
+<ul>
+<li><strong>Decomposition:</strong> We broke down the original code into smaller, more manageable functions (<code>create_turtle</code>, <code>draw_spirals</code>, <code>draw_spiral</code>). This made the code easier to understand, test, and modify.</li>
+<li><strong>Abstraction:</strong> We used functions to hide the complexity of certain tasks, such as creating a turtle object and drawing a spiral. This allowed us to use these functions without needing to know the underlying details.</li>
+<li><strong>Algorithmic Thinking:</strong> We defined a clear algorithm for drawing a spiral using a <code>while</code> loop and the <code>forward</code> and <code>left</code> commands.</li>
+<li><strong>Pattern Recognition:</strong> We identified patterns in the code, such as the repetition of commands within the loop, and used this understanding to create different visual patterns. Pattern recognition extends beyond just identifying patterns in data or code. It also involves understanding user needs and behaviors to design more effective and user-friendly solutions. This is crucial in areas like UX design and product development.</li>
+</ul>
+<p><strong>Key Takeaways:</strong></p>
+<ul>
+<li>Computational thinking is a powerful problem-solving approach that can be applied to various domains, even without extensive coding experience.</li>
+<li>By understanding and applying concepts like decomposition, abstraction, algorithmic thinking, and pattern recognition, you can improve your problem-solving skills and approach challenges with greater clarity and efficiency.</li>
+<li>Even simple coding exercises, like the turtle graphics example, can provide valuable insights into the principles of computational thinking and their practical applications.</li>
+</ul>
+<p>This concludes the lesson on computational thinking with turtle graphics. We encourage you to experiment with the code, modify it to create your own patterns, and continue exploring the fascinating world of computational thinking!</p>
+<h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://docs.python.org/3/library/turtle.html">turtle</a> - Python standard library package documentation</li>
+<li><a href="https://github.com/mathriddle/ColabTurtlePlus">ColabTurtlePlus</a> - Python package for turtle graphics on Colab notebooks</li>
+<li><a href="https://github.com/mathriddle/ColabTurtlePlus/blob/main/examples_version2/TurtleStar.md">Turtle Star</a> - Turtle star example from ColabTurtlePlus GitHub Repository.</li>
+<li><a href="https://edu.google.com/resources/programs/exploring-computational-thinking/">Exploring Computational Thinking</a> - Google for Education course resources</li>
+<li><a href="https://www.bbc.co.uk/bitesize/guides/zp92mp3/revision/1">Introduction to Computational Thinking</a> What is Computational Thinking?</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../genai/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Generative AI">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Generative AI
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Midhubalan Balasubramanian
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/midhubalan" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/midhubalan" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "content.tooltips", "navigation.tabs", "navigation.path", "navigation.expand", "navigation.indexes", "navigation.tracking", "navigation.footer", "navigation.top", "navigation.instant", "navigation.instant.progress", "toc.follow", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

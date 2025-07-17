@@ -1,0 +1,1079 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://computethinking.github.io/genai/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../turtles/">
+      
+      
+      <link rel="icon" href="../assets/images/cognition_2.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Computational Thinking & Gen AI - Computational Thinking</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#computational-thinking-generative-ai" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Computational Thinking" class="md-header__button md-logo" aria-label="Computational Thinking" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3c3.9 0 7 3.1 7 7 0 2.8-1.6 5.2-4 6.3V21H9v-3H8c-1.1 0-2-.9-2-2v-3H4.5c-.4 0-.7-.5-.4-.8L6 9.7C6.2 5.9 9.2 3 13 3m0-2C8.4 1 4.6 4.4 4.1 8.9L2.5 11c-.6.8-.6 1.8-.2 2.6.4.7 1 1.2 1.7 1.3V16c0 1.9 1.3 3.4 3 3.9V23h11v-5.5c2.5-1.7 4-4.4 4-7.5 0-5-4-9-9-9m-3 9c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1m3 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1m3 0c-.5 0-1-.4-1-1s.5-1 1-1 1 .4 1 1-.5 1-1 1"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Computational Thinking
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Computational Thinking & Gen AI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/computethinking/computethinking.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    computethinking/computethinking.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Generative AI
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../turtles/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Turtles
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Computational Thinking" class="md-nav__button md-logo" aria-label="Computational Thinking" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3c3.9 0 7 3.1 7 7 0 2.8-1.6 5.2-4 6.3V21H9v-3H8c-1.1 0-2-.9-2-2v-3H4.5c-.4 0-.7-.5-.4-.8L6 9.7C6.2 5.9 9.2 3 13 3m0-2C8.4 1 4.6 4.4 4.1 8.9L2.5 11c-.6.8-.6 1.8-.2 2.6.4.7 1 1.2 1.7 1.3V16c0 1.9 1.3 3.4 3 3.9V23h11v-5.5c2.5-1.7 4-4.4 4-7.5 0-5-4-9-9-9m-3 9c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1m3 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1m3 0c-.5 0-1-.4-1-1s.5-1 1-1 1 .4 1 1-.5 1-1 1"/></svg>
+
+    </a>
+    Computational Thinking
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/computethinking/computethinking.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    computethinking/computethinking.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Generative AI
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Generative AI
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-power-of-text-and-llms" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Power of Text and LLMs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-large-language-models-llms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Large Language Models (LLMs)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-design-as-computational-thinking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Design as Computational Thinking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anatomy-of-a-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anatomy of a Prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hands-on-with-google-ai-studio-and-gemini" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hands-on with Google AI Studio and Gemini
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../turtles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Turtles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-power-of-text-and-llms" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Power of Text and LLMs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-large-language-models-llms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Large Language Models (LLMs)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-design-as-computational-thinking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Design as Computational Thinking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anatomy-of-a-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anatomy of a Prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hands-on-with-google-ai-studio-and-gemini" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hands-on with Google AI Studio and Gemini
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="computational-thinking-generative-ai">Computational Thinking &amp; Generative AI<a class="headerlink" href="#computational-thinking-generative-ai" title="Permanent link">&para;</a></h1>
+<h2 id="the-power-of-text-and-llms">The Power of Text and LLMs<a class="headerlink" href="#the-power-of-text-and-llms" title="Permanent link">&para;</a></h2>
+<p>When you think of "computation" or "programming," what comes to mind? Perhaps you envision a software engineer writing complex code, a data analyst crunching numbers in a spreadsheet, or a mobile app developer creating the next viral game. These are all valid examples of traditional computation, where explicit instructions are written to perform specific tasks.
+On the other hand, text generation might evoke images of automated email responses, simple chatbots, or perhaps even grammar and spell-check tools.  These applications, while useful, often involve predefined templates or rule-based systems with limited flexibility. But the true power of text generation lies in its ability to tackle complex, nuanced tasks that were once thought to be exclusive to human intelligence. Consider these examples:</p>
+<ul>
+<li><strong>Creative Work:</strong> Imagine generating compelling marketing copy for a new product. An AI assistant could analyze product features, target audience demographics, and even competitor messaging to craft original and persuasive content.</li>
+<li><strong>Analytical Work:</strong>  Instead of manually sifting through mountains of data, an AI could analyze reports, summarize key findings, and even extract insights from unstructured data like meeting transcripts and emails.</li>
+<li><strong>Automation Work:</strong>  AI-powered chatbots can provide instant, personalized customer support, analyze technical issues, and guide users to relevant solutions, all while communicating in a natural and engaging manner.</li>
+</ul>
+<p>Large Language Models (LLMs) are driving this revolution. They can generate human-quality text, translate languages, write different kinds of creative content, and answer your questions in an informative way,  all through simple prompts written in natural language.  This allows for creating ad-hoc solutions to complex business problems on demand, without the need for specialized programming or data science expertise.</p>
+<p>However, crafting effective prompts that can elicit the desired output from an LLM requires more than just asking a question. It involves applying the principles of computational thinking:</p>
+<ul>
+<li><strong>Decomposition:</strong> Breaking down a complex problem into smaller, more manageable sub-problems that the LLM can address.</li>
+<li><strong>Abstraction:</strong>  Focusing on the essential information and desired outcome, while avoiding unnecessary details that might confuse the model.</li>
+<li><strong>Algorithmic Thinking:</strong>  Structuring the prompt in a logical and sequential manner, providing clear instructions and constraints.</li>
+<li><strong>Pattern Recognition:</strong>  Understanding the patterns and nuances of language to craft prompts that resonate with the LLM's training data and elicit the most relevant and accurate responses.</li>
+</ul>
+<h2 id="understanding-large-language-models-llms">Understanding Large Language Models (LLMs)<a class="headerlink" href="#understanding-large-language-models-llms" title="Permanent link">&para;</a></h2>
+<p><strong>2.1 What are LLMs?</strong></p>
+<p>Large Language Models (LLMs) are sophisticated AI systems that can understand and generate human-like text.  They are built upon <strong>neural networks</strong>, which are complex structures inspired by the human brain. These networks consist of interconnected <strong>nodes</strong>, processing and transmitting information like neurons.</p>
+<p>Imagine each node as a tiny decision-maker,  collectively contributing to the model's ability to understand and generate language.</p>
+<p><strong>2.2  Key Characteristics of LLMs</strong></p>
+<p>To effectively leverage LLMs, it's important to understand some of their key characteristics:</p>
+<ul>
+<li><strong>Training Data:</strong> LLMs are trained on massive datasets of text and code, which influences their capabilities and potential biases.</li>
+<li><strong>Architecture:</strong> The arrangement of these interconnected nodes in layers affects the model's performance and efficiency. Information flows through these layers, allowing the model to process and generate text.</li>
+<li><strong>Parameters:</strong>  Think of parameters as the knobs and dials that control the model's behavior. A simple linear model might need only two parameters to describe a relationship. But human language is vastly more complex, requiring millions or even billions of parameters for LLMs to capture its nuances. For instance, ChatGPT boasts 175 billion parameters, while Gemini has even more!</li>
+<li><strong>Capabilities:</strong> LLMs demonstrate remarkable capabilities, including:<ul>
+<li><strong>Text generation:</strong>  Writing stories, poems, articles, and even code.</li>
+<li><strong>Translation:</strong>  Accurately translating between multiple languages.</li>
+<li><strong>Summarization:</strong>  Condensing lengthy documents into concise summaries.</li>
+<li><strong>Question answering:</strong>  Providing informative and comprehensive answers to complex questions.</li>
+</ul>
+</li>
+</ul>
+<p>It's important to note that while some LLMs may excel in multiple areas, trade-offs often exist. A model optimized for creative writing might not be the best at factual summarization. Additionally, LLMs can sometimes "hallucinate," generating incorrect or nonsensical information, highlighting the need for careful evaluation and critical thinking when using these models.</p>
+<p><strong>2.3 Understanding Model Cards</strong></p>
+<p>Now that you have a basic understanding of LLMs, let's explore how companies actually access and utilize these powerful models.</p>
+<p><strong>Accessing LLMs</strong></p>
+<p>There are several ways for businesses to get started with LLMs:</p>
+<ul>
+<li><strong>Public Cloud Providers:</strong> Companies like Google, Microsoft, and Amazon offer LLMs as a service through their cloud platforms. This allows businesses to access and use these models without the need for significant infrastructure investments.</li>
+<li><strong>Model Repositories:</strong> Platforms like Hugging Face and Google's Vertex AI Model Garden provide access to a wide range of pre-trained LLMs, often with different capabilities and specializations.</li>
+<li><strong>Web Services/Subscriptions:</strong> Many LLMs are accessible via web services or APIs (Application Programming Interfaces). This allows developers to integrate these models into their own applications or workflows using simple REST (Representational State Transfer) commands.</li>
+<li><strong>Self-Hosting:</strong> For companies with specific security or privacy requirements, self-hosting LLMs in their own data centers is also an option, although it requires significant infrastructure and expertise.</li>
+</ul>
+<p><strong>The Need for Model Cards</strong></p>
+<p>With so many LLMs available, choosing the right one for a specific task can be challenging. This is where <strong>model cards</strong> play a crucial role.</p>
+<p>To help users choose the right LLM for their needs, model developers provide <strong>model cards</strong>. These cards provide essential information about the model, including:</p>
+<ul>
+<li><strong>Training data:</strong>  What kind of data was the model trained on?</li>
+<li><strong>Intended use cases:</strong> What tasks is the model best suited for?</li>
+<li><strong>Limitations:</strong> What are the model's limitations or potential biases?</li>
+<li><strong>Ethical considerations:</strong> Are there any ethical implications to consider when using the model?</li>
+<li><strong>Performance metrics:</strong> How well does the model perform on different tasks?</li>
+</ul>
+<p>By understanding the information presented in a model card, you can evaluate an LLM's fitness-for-purpose and make informed decisions about its suitability for your specific business needs.</p>
+<p>Check out model cards from Hugging Face for OpenAI, Google, and Meta below.</p>
+<p><a class="btn btn-purple mr-5" href="https://huggingface.co/openai">Open AI</a>
+<a class="btn btn-blue mr-5" href="https://huggingface.co/google">Google</a>
+<a class="btn btn-green" href="https://huggingface.co/meta-llama">Meta</a></p>
+<p><strong>2.4  Beyond the Basics</strong></p>
+<p>While this provides a high-level overview, there are many other aspects to LLMs, such as:</p>
+<ul>
+<li><strong>Fine-tuning:</strong> Adapting a pre-trained LLM for specific tasks or domains.</li>
+<li><strong>Prompt engineering:</strong> Crafting effective prompts to elicit desired outputs.</li>
+<li><strong>Model evaluation:</strong>  Assessing the performance and limitations of different LLMs.</li>
+</ul>
+<h2 id="prompt-design-as-computational-thinking">Prompt Design as Computational Thinking<a class="headerlink" href="#prompt-design-as-computational-thinking" title="Permanent link">&para;</a></h2>
+<p><strong>2.1 Introduction to Prompts</strong></p>
+<p>In traditional computing, we use programming languages to communicate with computers. We write explicit instructions, defining the exact steps and logic for the computer to execute. Whether it's automating office tasks or building complex software, our ability to express solutions through code is crucial.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">calculate_area</span><span class="p">(</span><span class="n">length</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="sd">&quot;&quot;&quot;Calculates the area of a rectangle.</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="sd">  Args:</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="sd">    length: The length of the rectangle.</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="sd">    width: The width of the rectangle.</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="sd">  Returns:</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="sd">    The area of the rectangle.</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="sd">  &quot;&quot;&quot;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  <span class="k">return</span> <span class="n">length</span> <span class="o">*</span> <span class="n">width</span>
+</span></code></pre></div>
+<p>For example, this Python function calculates the area of a rectangle. Its type signature (<code>calculate_area(length: float, width: float) -&gt; float</code>) defines how we can interact with it, while the code within its body represents the logic it executes.</p>
+<p>Generative AI, however, offers a different paradigm. Instead of rigid programming syntax, we use natural language to communicate with Large Language Models (LLMs).  These models have learned from vast amounts of text data, encoding knowledge and patterns that allow them to understand and respond to human language.</p>
+<p>Think of an LLM as a knowledgeable assistant who understands your instructions, can access and process information relevant to your request, and can generate outputs that meet your specific needs.</p>
+<p><strong>Crafting Effective Prompts</strong></p>
+<p>To effectively utilize LLMs, we need to craft prompts that clearly convey our intent.  This involves:</p>
+<ul>
+<li><strong>Instructions:</strong>  Clearly stating what we want the LLM to do.  For example, "Summarize this article" or "Write a poem about nature."</li>
+<li><strong>Context:</strong> Providing relevant information that helps the LLM understand the task and generate a more accurate response.  For instance, if you're asking for marketing copy, provide details about the product and target audience.</li>
+<li><strong>Constraints:</strong> Specifying any limitations or requirements for the output. This could include the desired length, format, or style.</li>
+</ul>
+<p><strong>Beyond Explicit Instructions</strong></p>
+<p>Interestingly, LLMs can also infer instructions and processing logic from various cues:</p>
+<ol>
+<li><strong>Examples:</strong> Providing one or more examples of the desired output can guide the LLM's generation process. This is akin to showing, rather than just telling, the model what you want.</li>
+<li><strong>Persona or Scenario:</strong> Asking the LLM to adopt a specific persona (e.g., "Imagine you are a financial advisor") or assume a scenario can influence its response and generate more contextually relevant output.</li>
+<li><strong>Memory:</strong> LLMs have a form of memory, allowing them to retain and contextualize information from recent interactions. This means that the model's response to a current prompt can be influenced by previous prompts and responses within the same conversation. This allows for more dynamic and engaging interactions.</li>
+</ol>
+<h2 id="anatomy-of-a-prompt">Anatomy of a Prompt<a class="headerlink" href="#anatomy-of-a-prompt" title="Permanent link">&para;</a></h2>
+<p><strong>3.1 Required vs. Optional Elements</strong></p>
+<p>Crafting effective prompts is like assembling a puzzle. You need the right pieces in the right places to create a complete and meaningful picture. Here's a breakdown of the essential and optional components of a prompt:</p>
+<ul>
+<li>
+<p><strong>Required:</strong></p>
+<ul>
+<li><strong>Task:</strong> Clearly state what you want the LLM to do. This is the core of your prompt, like the centerpiece of a puzzle. Think of verbs like "summarize," "translate," "write," "analyze," or "generate."</li>
+<li><strong>Content:</strong>  Provide the information that the LLM should work with. This could be a text passage, a set of data points, a question, or even a creative idea.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional:</strong></p>
+<ul>
+<li><strong>Instructions:</strong>  Provide additional guidance on how the LLM should perform the task. Think of adverbs and adjectives that add detail and specificity: "summarize concisely," "translate accurately," "write in a humorous tone."</li>
+<li><strong>Context:</strong>  Include relevant background information to help the LLM understand the task and generate a more accurate response. This is like providing the LLM with the edges of the puzzle, helping it see the bigger picture.</li>
+<li><strong>Constraints:</strong>  Specify any limitations or requirements for the output. This could include the desired length, format, or style. Constraints are like the boundaries of the puzzle, keeping the LLM focused on the desired outcome.</li>
+</ul>
+</li>
+</ul>
+<p><strong>3.2 System Instructions</strong></p>
+<p>System instructions are special directives that guide the LLM's overall behavior. Think of them as setting the ground rules for the AI, influencing its approach to every task and interaction.  They are crucial for implementing your organization's policies regarding privacy, AI safety, and security.</p>
+<p>Here's how system instructions can help:</p>
+<ul>
+<li><strong>Guiding Principles:</strong> Clearly state your company's policies regarding data privacy, responsible AI usage, and security protocols. For example, "You will prioritize user privacy and will not disclose any personally identifiable information."</li>
+<li><strong>Setting Boundaries:</strong> Define explicit constraints on the AI's responses.  This might include preventing the generation of harmful, biased, or inappropriate content. For instance, "You will not generate responses that are racist, sexist, or discriminatory in any way."</li>
+<li><strong>Enforcing Compliance:</strong> Ensure the AI adheres to legal and ethical guidelines. This could involve respecting copyright laws, avoiding plagiarism, or providing accurate information.</li>
+</ul>
+<p>While system instructions are a powerful tool, they are not a silver bullet.  A comprehensive approach to safety and compliance requires a multi-layered strategy.</p>
+<details class="info" open="open">
+<summary>Beyond System Instructions: A Multi-layered Approach to Safety and Compliance</summary>
+<p>While system instructions are essential, they are just one piece of the puzzle. To build truly safe and compliant AI solutions, consider these additional measures:</p>
+<p><strong>Data Security:</strong></p>
+<ul>
+<li><strong>Input Sanitization:</strong>  Remove or mask sensitive information from user inputs.</li>
+<li><strong>Output Filtering:</strong>  Prevent the AI from generating harmful or sensitive outputs.</li>
+<li><strong>Data Encryption:</strong>  Protect data during transmission and storage.</li>
+<li><strong>Access Control:</strong>  Restrict access to the AI and its data.</li>
+</ul>
+<p><strong>Model Selection and Fine-tuning:</strong></p>
+<ul>
+<li><strong>Choose responsible models:</strong> Prioritize models trained on diverse and unbiased data.</li>
+<li><strong>Fine-tune for safety:</strong>  Adapt the model to align with your specific policies.</li>
+</ul>
+<p><strong>Monitoring and Auditing:</strong></p>
+<ul>
+<li><strong>Continuous Monitoring:</strong>  Track AI interactions and outputs for potential issues.</li>
+<li><strong>Regular Audits:</strong>  Assess the effectiveness of your safety measures.</li>
+</ul>
+<p><strong>User Education:</strong></p>
+<ul>
+<li><strong>Transparency:</strong>  Inform users about the AI's capabilities and limitations.</li>
+<li><strong>Guidance:</strong>  Provide clear instructions on responsible AI interaction.</li>
+</ul>
+<p><strong>Red Teaming:</strong></p>
+<ul>
+<li><strong>Adversarial Testing:</strong>  Proactively identify vulnerabilities through simulated attacks.</li>
+</ul>
+</details>
+<p><strong>3.3 Chat vs. Completion</strong></p>
+<p>LLMs can operate in two primary modes: chat and completion. Understanding the distinctions between these modes is crucial for selecting the right approach for your application.</p>
+<ul>
+<li>
+<p><strong>Chat Mode:</strong> This mode facilitates an ongoing conversation where the LLM retains context from previous interactions. Think of it like a conversation with a colleague, where your current exchange builds upon what was said earlier. This is ideal for scenarios where:</p>
+<ul>
+<li><strong>Context is crucial:</strong> The LLM needs to understand the flow of the conversation and maintain information from previous turns.</li>
+<li><strong>Dynamic interaction is needed:</strong>  The user's input might evolve or change based on the LLM's responses, requiring a back-and-forth exchange.</li>
+<li><strong>Longer conversations are desired:</strong>  The interaction involves a series of prompts and responses, potentially exceeding the context window of a single completion request.</li>
+</ul>
+</li>
+<li>
+<p><strong>Completion Mode:</strong> This mode involves providing a single prompt and receiving a single response, without any conversational context. It's like sending a self-contained email or text message. This is suitable for:</p>
+<ul>
+<li><strong>Self-contained tasks:</strong> The prompt provides all the necessary context and instructions, and a single response is sufficient.</li>
+<li><strong>Limited or irrelevant context:</strong> The interaction doesn't require the LLM to retain information from previous turns.</li>
+<li><strong>Efficiency:</strong> Completion mode can be faster and less computationally expensive for simple tasks.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Relationship between Chat and Completion</strong></p>
+<p>You can think of chat mode as a generalization of completion mode. A completion task can be seen as a special case of a chat interaction where the conversation length is limited to a single turn.</p>
+<p><strong>Key Considerations:</strong></p>
+<ul>
+<li><strong>Context Window:</strong>  In chat mode, managing the context window becomes crucial as the conversation progresses. Techniques like summarization or context window extension might be necessary to maintain coherence over extended interactions.</li>
+<li><strong>Prompt Design:</strong>  In chat mode, prompts need to be designed with the ongoing conversation in mind. Each prompt should build upon the previous interactions and provide sufficient context for the LLM to understand the user's intent.</li>
+<li><strong>Application Design:</strong>  The choice between chat and completion modes significantly influences the design of the user interface and the overall user experience.</li>
+</ul>
+<p>By carefully considering these factors, you can choose the most appropriate mode for your specific application and leverage the strengths of LLMs effectively.</p>
+<p><strong>3.4 Tokens and Context Window</strong></p>
+<p>Large Language Models (LLMs) don't process text as a continuous stream of words. Instead, they break it down into smaller units called <strong>tokens</strong>. A token can be a word, a part of a word, or even a punctuation mark. Think of them as the individual building blocks of language that the LLM understands and manipulates.</p>
+<p>The <strong>context window</strong> refers to the maximum number of tokens the LLM can consider at a time. It's like the model's short-term memory, limiting how much information it can hold and process simultaneously. This limitation applies even when dealing with multimodal prompts, where images and other modalities are also converted into tokens, potentially consuming a significant portion of the context window.</p>
+<p>Exceeding the context window can lead to truncated or irrelevant responses, as the LLM might lose track of earlier parts of the conversation or prompt. This is particularly crucial in chat-based interactions, where the conversation history can quickly fill up the context window.</p>
+<p>To address these limitations, developers employ various techniques:</p>
+<ul>
+<li><strong>Prompt Caching:</strong> Storing previous prompts and responses to reuse or adapt them for similar interactions.</li>
+<li><strong>Summarization:</strong> Condensing the conversation history to maintain context while reducing the number of tokens.</li>
+<li><strong>Context Window Extension Techniques:</strong> Employing methods like sliding windows, attention mechanisms, and memory networks to effectively extend the context window.</li>
+<li><strong>Hybrid Approaches:</strong> Combining these techniques to optimize performance and maintain context.</li>
+<li><strong>Prompt Engineering:</strong> Encouraging concise prompts and breaking down complex tasks into smaller sub-tasks.</li>
+</ul>
+<p>Understanding the concept of context window is crucial for crafting effective prompts and designing successful LLM applications. By being mindful of its limitations and employing appropriate strategies, you can ensure that your interactions with LLMs remain coherent, relevant, and productive.</p>
+<p><strong>3.5 Controlling Output with Generation Parameters</strong></p>
+<p>In addition to the core elements of a prompt, you can further refine the LLM's output using generation parameters. These parameters act as "knobs" that you can adjust to influence the generation process. Some common parameters include:</p>
+<ul>
+<li><strong>Temperature:</strong> This parameter controls the "creativity" or randomness of the LLM's output. Higher temperatures result in more diverse and unexpected outputs, while lower temperatures produce more focused and deterministic responses.</li>
+<li><strong>Top-K:</strong> This parameter limits the LLM's choices to the top K most probable tokens at each step. This can be used to control the diversity and predictability of the output.</li>
+</ul>
+<p>By experimenting with these parameters, you can fine-tune the LLM's responses to better align with your specific needs and preferences.</p>
+<p><strong>3.6 Prompt Formatting, Length, and Common Pitfalls</strong></p>
+<p>To get the most out of your interactions with LLMs, it's important to pay attention to not just the content of your prompts but also their structure and presentation.</p>
+<p><strong>Prompt Formatting</strong></p>
+<p>Think of prompt formatting as the grammar and punctuation of your instructions to the LLM.  While LLMs are generally robust to minor variations, following these guidelines can improve clarity and effectiveness:</p>
+<ul>
+<li><strong>Whitespace:</strong> Use whitespace effectively to separate different parts of your prompt, such as instructions, context, and the main content. This improves readability for both you and the LLM.</li>
+<li><strong>Punctuation:</strong> Use correct punctuation to ensure the LLM understands the structure and intent of your prompt. For example, use periods to end sentences, commas to separate items in a list, and quotation marks to denote direct speech or citations.</li>
+<li><strong>Special Characters:</strong>  Some LLMs might interpret special characters or markdown formatting in specific ways. Be aware of these conventions and use them consistently to structure your prompts.</li>
+</ul>
+<p><strong>Prompt Length</strong></p>
+<p>Remember that LLMs have a limited context window, which determines how much information they can process at a time.  Keep your prompts concise and focused, avoiding unnecessary details or repetition. If you need to provide a lot of context, consider breaking it down into smaller chunks or using summarization techniques.</p>
+<p><strong>Common Pitfalls</strong></p>
+<p>Here are some common pitfalls to avoid when crafting prompts:</p>
+<ul>
+<li><strong>Vague Instructions:</strong>  Avoid ambiguous or unclear instructions. Be specific about what you want the LLM to do.</li>
+<li><strong>Irrelevant Context:</strong>  Don't overload the prompt with unnecessary information. Focus on the context that is directly relevant to the task.</li>
+<li><strong>Overly Restrictive Constraints:</strong>  While constraints can be helpful, avoid making them too rigid. Allow the LLM some flexibility to generate creative and insightful responses.</li>
+<li><strong>Ignoring Model Capabilities:</strong>  Choose an LLM that is suitable for the task at hand. Don't expect a model specialized in summarization to excel at creative writing.</li>
+<li><strong>Neglecting Ethical Considerations:</strong>  Be mindful of the potential biases and ethical implications of LLMs. Avoid generating harmful or misleading content.</li>
+</ul>
+<p>By paying attention to these aspects of prompt design, you can significantly improve the quality and relevance of the LLM's outputs.</p>
+<p>Okay, I can help you develop this section, incorporating the comparison with the Gemini app and omitting the subsection on the <code>requests</code> library as you requested.</p>
+<h2 id="hands-on-with-google-ai-studio-and-gemini">Hands-on with Google AI Studio and Gemini<a class="headerlink" href="#hands-on-with-google-ai-studio-and-gemini" title="Permanent link">&para;</a></h2>
+<p><strong>3.1 Introducing Google AI Studio</strong></p>
+<p>Now that we've explored the concepts of prompts and prompt design, it's time to get hands-on! Google AI Studio provides a user-friendly platform for accessing and experimenting with various generative AI models, including Gemini.</p>
+<p><a class="glightbox" href="../assets/images/ai-studio.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Google AI Studio" src="../assets/images/ai-studio.png" /></a></p>
+<p>Think of AI Studio as your creative playground for exploring the capabilities of LLMs. It offers several benefits:</p>
+<ul>
+<li><strong>Ease of Use:</strong> AI Studio provides a streamlined interface that simplifies interacting with LLMs, even without coding experience.</li>
+<li><strong>Model Exploration:</strong> You can easily access and experiment with different LLMs, comparing their strengths and weaknesses for various tasks.</li>
+<li><strong>Prompt Experimentation:</strong> The platform allows you to iterate on your prompts, trying different variations and observing their impact on the generated output.</li>
+<li><strong>Collaboration:</strong> You can share your prompts and results with others, fostering collaboration and knowledge sharing.</li>
+</ul>
+<p><strong>AI Studio vs. Gemini App</strong></p>
+<p>You might be wondering how AI Studio differs from the Gemini app. While both provide access to Gemini, they cater to different needs and use cases:</p>
+<ul>
+<li><strong>AI Studio:</strong> Focuses on providing a flexible and customizable environment for experimenting with various LLMs, including Gemini. It offers more advanced features and allows for programmatic access through APIs.</li>
+<li><strong>Gemini App:</strong> Provides a more streamlined and user-friendly experience for casual users who want to explore Gemini's capabilities without delving into technical details.</li>
+</ul>
+<p><strong>3.2 Introducing Gemini</strong></p>
+<p>Gemini is Google's next-generation family of multimodal generative AI models. It's designed to be highly versatile, capable of handling text, images, and potentially other modalities in the future.</p>
+<ul>
+<li><strong>Multimodal:</strong> Gemini is designed to handle not just text, but also images and potentially other modalities like audio and video in the future. This allows for richer and more nuanced interactions compared to text-only models.</li>
+<li><strong>Family of Models:</strong> Gemini is not a single model, but a family of models with different sizes and capabilities. This allows developers to choose the model that best suits their needs and resource constraints.</li>
+<li><strong>Advanced Reasoning and Coding:</strong>  Gemini is expected to demonstrate improved capabilities in areas like reasoning, coding, and complex problem-solving.</li>
+<li><strong>Integration with Google Products:</strong> Gemini is integrated into various Google products such as Google Workspace (e.g. Docs, Slides, Sheets), Google Cloud Platform, and NotebookLM.</li>
+</ul>
+<p>Please see the <a href="https://ai.google.dev/gemini-api/docs/models/gemini">documentation page</a> for further details.</p>
+<p>Within AI Studio, you can access Gemini in two ways:</p>
+<ul>
+<li><strong>Web Service:</strong> This provides a user-friendly interface for interacting with Gemini using natural language prompts.</li>
+<li><strong>API Access:</strong> For more advanced use cases, you can access Gemini programmatically using its API (Application Programming Interface). This allows you to integrate Gemini into your own applications or workflows. See the <a href="https://github.com/google-gemini/cookbook">Google Gemini cookbook repository</a> for code samples in Jupyter Notebook format. Many of the sample notebooks can be opened in Google Colab with minimal effort. </li>
+</ul>
+<p><strong>3.3 Concise Overview of the Gemini API</strong></p>
+<p>The Gemini API allows you to interact with Gemini programmatically, giving you more control and flexibility compared to using the web interface.  You'll be using the <code>google-generativeai</code> Python package, which provides convenient functions for making API calls.</p>
+<p><strong>Key Concepts</strong></p>
+<ul>
+<li><strong>API Key:</strong>  To access the API, you'll need an API key, which is a unique identifier that authenticates your requests. You can obtain an API key through the Google AI Studio console (The link with a key shaped icon on the left side navigation menu).</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Protect API Key!</p>
+<p>API key is like a password. Keep it safe. Do not accidentally share the password. Use environment variables or Colab Secrets to keep the API key safe. 
+See this <a href="https://colab.research.google.com/github/google-gemini/cookbook/blob/main/quickstarts/Authentication.ipynb">notebook</a> for details </p>
+</div>
+<ul>
+<li>
+<p><strong>Models:</strong>  Gemini offers a family of models with different capabilities. You'll specify the desired model in your API requests.</p>
+</li>
+<li>
+<p><strong>Methods:</strong>  The API provides various methods for different tasks, such as generating text, translating languages, and answering questions.</p>
+</li>
+<li><strong>Parameters:</strong>  You can customize the API's behavior using parameters, such as temperature and top-k, which we discussed in the prompt design section.</li>
+</ul>
+<p><strong>Basic Workflow</strong></p>
+<p>Here's a simplified workflow for using the Gemini API with the <code>google-generativeai</code> package:</p>
+<ol>
+<li><strong>Install the package:</strong>  <code>pip install google-generativeai</code></li>
+<li><strong>Import the library:</strong>  <code>import google.generativeai as genai</code></li>
+<li><strong>Set your API key:</strong>  <code>genai.configure(api_key='YOUR_API_KEY')</code></li>
+<li><strong>Create a model instance:</strong>  <code>model = genai.GenerativeModel('gemini-pro')</code> (or another model name)</li>
+<li><strong>Generate text:</strong>  <code>response = model.generate_text(prompt='Your prompt here')</code></li>
+<li><strong>Access the output:</strong>  <code>print(response.result)</code></li>
+</ol>
+<p>See this <a href="https://ai.google.dev/gemini-api/docs/text-generation?lang=python">API reference</a> for text generation code snippets.</p>
+<p><strong>3.5 Hands-on Prompt Creation</strong></p>
+<p>Now, let's put your prompt design skills to the test! Within AI Studio, you can experiment with various types of prompts:</p>
+<ul>
+<li><strong>System Instructions:</strong> Provide high-level guidance to the LLM, such as setting its persona or defining constraints.</li>
+<li><strong>Few-shot Examples:</strong> Give the LLM a few examples of the desired output to guide its generation process.</li>
+<li><strong>Role-play:</strong> Ask the LLM to assume a specific role or scenario to generate contextually relevant responses.</li>
+</ul>
+<p>Here is an example to get you started. Explore more prompting <a href="https://github.com/google-gemini/cookbook/tree/main/examples/prompting">strategies sample here</a>.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="o">-</span><span class="n">q</span> <span class="s2">&quot;google-generativeai&gt;=0.7.2&quot;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">google.generativeai</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">genai</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">userdata</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">GOOGLE_API_KEY</span> <span class="o">=</span> <span class="n">userdata</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;GOOGLE_API_KEY&quot;</span><span class="p">)</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">genai</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="n">GOOGLE_API_KEY</span><span class="p">)</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">model</span> <span class="o">=</span> <span class="n">genai</span><span class="o">.</span><span class="n">GenerativeModel</span><span class="p">(</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="s2">&quot;models/gemini-1.5-flash&quot;</span><span class="p">,</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="n">system_instruction</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="s2">    You are a business school professor teaching a course on computational thinking for business students with limited prior programming experience. You are an expert in generative AI. You provide crisp explanations of technical concepts with relatable examples.</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="s2">    You will enquire about and confirm the information you need about students&#39; prior knowledge before explaining advanced technical concepts</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="s2">    &quot;&quot;&quot;</span><span class="p">,</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">)</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="n">response</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">generate_content</span><span class="p">(</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    <span class="s2">&quot;Explain how AI works&quot;</span><span class="p">,</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    <span class="n">generation_config</span> <span class="o">=</span> <span class="n">genai</span><span class="o">.</span><span class="n">GenerationConfig</span><span class="p">(</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>        <span class="n">max_output_tokens</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>        <span class="n">temperature</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="p">)</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="p">)</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Markdown</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
+</span></code></pre></div>
+<details class="info">
+<summary>Annotated version of code</summary>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Install the google-generativeai package. The -U flag updates to the latest version, </span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># and -q flag ensures quiet installation (minimal output).</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="o">-</span><span class="n">q</span> <span class="s2">&quot;google-generativeai&gt;=0.7.2&quot;</span> 
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># Import the library for using Google&#39;s generative AI models.</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">google.generativeai</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">genai</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1"># Import the userdata module to access user-specific data stored in Colab.</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">userdata</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="c1"># Retrieve the Google API key from user data. This key is needed to authenticate API requests.</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">GOOGLE_API_KEY</span> <span class="o">=</span> <span class="n">userdata</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;GOOGLE_API_KEY&quot;</span><span class="p">)</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="c1"># Configure the generative AI library with the API key.</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="n">genai</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="n">GOOGLE_API_KEY</span><span class="p">)</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="c1"># Create a GenerativeModel instance using the specified Gemini model (&quot;gemini-1.5-flash&quot;).</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="n">model</span> <span class="o">=</span> <span class="n">genai</span><span class="o">.</span><span class="n">GenerativeModel</span><span class="p">(</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    <span class="s2">&quot;models/gemini-1.5-flash&quot;</span><span class="p">,</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    <span class="c1"># Provide a system instruction to guide the model&#39;s behavior and persona.</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>    <span class="n">system_instruction</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="s2">    You are a business school professor teaching a course on computational thinking for business students with limited prior programming experience. You are an expert in generative AI. You provide crisp explanations of technical concepts with relatable examples.</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="s2">    You will enquire about and confirm the information you need about students&#39; prior knowledge before explaining advanced technical concepts</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="s2">    &quot;&quot;&quot;</span><span class="p">,</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="p">)</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="c1"># Generate content from the model using the provided prompt and generation configuration.</span>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="n">response</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">generate_content</span><span class="p">(</span>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>    <span class="s2">&quot;Explain how AI works&quot;</span><span class="p">,</span>
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>    <span class="c1"># Configure the generation parameters, such as the maximum number of output tokens and temperature.</span>
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>    <span class="n">generation_config</span> <span class="o">=</span> <span class="n">genai</span><span class="o">.</span><span class="n">GenerationConfig</span><span class="p">(</span>
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>        <span class="n">max_output_tokens</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>        <span class="n">temperature</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>    <span class="p">)</span>
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="p">)</span>
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="c1"># Import necessary modules for displaying the output in a Markdown format.</span>
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Markdown</span>
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>
+</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="c1"># Display the generated text from the model&#39;s response in a Markdown format.</span>
+</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
+</span></code></pre></div>
+</details>
+<p>By combining the user-friendly interface of AI Studio with the flexibility of the Gemini API, you can explore the full potential of generative AI and apply it to various business challenges.</p>
+<h2 id="references">References:<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://ai.google.dev/api?lang=python">Gemini API Reference</a></li>
+<li><a href="https://ai.google.dev/gemini-api/docs/models/gemini">Gemini Model Card</a></li>
+<li><a href="https://huggingface.co/models">Hugging Face Models</a></li>
+<li><a href="https://ai.google.dev/gemini-api/docs/prompting-strategies">Gemini Prompting Strategies</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../turtles/" class="md-footer__link md-footer__link--next" aria-label="Next: Turtles">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Turtles
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Midhubalan Balasubramanian
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/midhubalan" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/midhubalan" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "content.tooltips", "navigation.tabs", "navigation.path", "navigation.expand", "navigation.indexes", "navigation.tracking", "navigation.footer", "navigation.top", "navigation.instant", "navigation.instant.progress", "toc.follow", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

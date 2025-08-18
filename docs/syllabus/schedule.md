@@ -12,11 +12,12 @@ See Course [Canvas site](https://canvas.pitt.edu/courses/324345/assignments) for
 | --|:---- | :---:| 
 | 1 | Course Introduction | Aug 25 2025 |
 | 2 | Python  Basics| Sep 08 2025 | 
-| 3 | Data Analysis using Python| Oct 06 2025 | 
-| 4 | Experimentation | Oct 20 2025 | 
-| 5 | Data Analysis using R| Nov 03 2025 | 
-| 6 | Text Data| Nov 17 2025 | 
-| 7 | AI & ML: Fairness, Bias, and Inclusiveness| Dec 01 2025 | 
+| 3 | Data Analysis using Python| Sep 22 2025 | 
+| 4 | Experimentation + ==Project proposal due== | Oct 06 2025 |
+| 5 | Data Analysis using R| Oct 20 2025 | 
+| 6 | Text Data| Nov 03 2025 | 
+| 7 | AI & ML: Fairness, Bias, and Inclusiveness| Nov 14 2025 | 
+| 8 | ==Optional: Final Project== | Dec 01 2025 | 
 
 </div>
 
@@ -74,7 +75,7 @@ See Course [Canvas site](https://canvas.pitt.edu/courses/324345/assignments) for
 !!! warning "Project proposal due for students aiming to complete a final course project |  `Oct 06 2025`" 
 
 
-??? quote "Programmatic data analysis, pattern detection, and storytelling using R| `Oct 20 2025`"
+??? quote "Programmatic data analysis, pattern detection, and storytelling using R | `Oct 20 2025`"
 
     ## :material-numeric-5-circle: Data Analysis using R
     Required exercises:
@@ -97,7 +98,7 @@ See Course [Canvas site](https://canvas.pitt.edu/courses/324345/assignments) for
 
     * Conduct text mining analysis in R
 
-??? quote "AI and machine learning fairness, bias, and inclusiveness | `Nov 10 2025` "
+??? quote "AI and machine learning fairness, bias, and inclusiveness | `Nov 14 2025` "
 
     ## :material-numeric-7-circle: AI & ML: Fairness, Bias, and Inclusiveness
 

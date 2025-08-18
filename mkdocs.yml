@@ -7,6 +7,7 @@ theme:
     code: Roboto Mono
   icon:
     logo: material/head-dots-horizontal-outline
+    annotation: material/arrow-right-circle
   favicon: assets/images/cognition_2.png
   features:
     - content.code.copy
@@ -114,8 +115,17 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+  - footnotes
 nav:
   - Home: index.md
-  - Generative AI: genai.md 
+  - Syllabus:
+    - syllabus/index.md
+    - Course Description: syllabus/course-description.md
+    - Course Materials: syllabus/course-materials.md
+    - Grading & Evaluation: syllabus/grading.md
+    - Schedule: syllabus/schedule.md
+    - AI Policy: syllabus/ai-policy.md
+    - Course Policies: syllabus/course-policies.md
   - Turtles: turtles.md
+  - Generative AI: genai.md 
     

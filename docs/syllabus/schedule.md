@@ -16,7 +16,7 @@ See Course [Canvas site](https://canvas.pitt.edu/courses/324345/assignments) for
 | 4 | Experimentation + ==Project proposal due== | Oct 06 2025 |
 | 5 | Data Analysis using R| Oct 20 2025 | 
 | 6 | Text Data| Nov 03 2025 | 
-| 7 | AI & ML: Fairness, Bias, and Inclusiveness| Nov 14 2025 | 
+| 7 | AI & ML: Fairness, Bias, and Inclusiveness| Nov 17 2025 | 
 | 8 | ==Optional: Final Project== | Dec 01 2025 | 
 
 </div>
@@ -98,7 +98,7 @@ See Course [Canvas site](https://canvas.pitt.edu/courses/324345/assignments) for
 
     * Conduct text mining analysis in R
 
-??? quote "AI and machine learning fairness, bias, and inclusiveness | `Nov 14 2025` "
+??? quote "AI and machine learning fairness, bias, and inclusiveness | `Nov 17 2025` "
 
     ## :material-numeric-7-circle: AI & ML: Fairness, Bias, and Inclusiveness
 

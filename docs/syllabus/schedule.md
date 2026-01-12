@@ -10,18 +10,18 @@ See Course [Canvas site](https://canvas.pitt.edu/courses/324345/assignments) for
 
 | # | Topic | Date | 
 | --|:---- | :---:| 
-| 1 | Course Introduction | Aug 25 2025 |
-| 2 | Python  Basics| Sep 08 2025 | 
-| 3 | Data Analysis using Python| Sep 22 2025 | 
-| 4 | Experimentation + ==Project proposal due== | Oct 06 2025 |
-| 5 | Data Analysis using R| Oct 20 2025 | 
-| 6 | Text Data| Nov 03 2025 | 
-| 7 | AI & ML: Fairness, Bias, and Inclusiveness| Nov 17 2025 | 
-| 8 | ==Optional: Final Project== | Dec 01 2025 | 
+| 1 | Course Introduction | Jan 23 2026 |
+| 2 | Python  Basics| Feb 06 2026 | 
+| 3 | Data Analysis using Python| Feb 20 2026 | 
+| 4 | Experimentation + ==Project proposal due== | Mar 06 2026 |
+| 5 | Data Analysis using R| Mar 20 2026 | 
+| 6 | Text Data| Apr 03 2026 | 
+| 7 | AI & ML: Fairness, Bias, and Inclusiveness| Apr 17 2026 | 
+| 8 | ==Optional: Final Project== | Apr 24 2026 | 
 
 </div>
 
-??? quote "Course Introduction | `Aug 25 2025`"
+??? quote "Course Introduction | `Jan 23 2026`"
 
     ## :material-numeric-1-circle: Course Introduction 
 
@@ -35,7 +35,7 @@ See Course [Canvas site](https://canvas.pitt.edu/courses/324345/assignments) for
             - [NotebookLM](https://www.linkedin.com/learning/notebooklm-for-research/learning-notebooklm-for-research) for Research  
             - [NotebookLM: First Look](https://www.linkedin.com/learning/notebooklm-first-look/use-notebooklm-as-an-ai-powered-notebook-system)
     
-??? quote "Python Basics | `Sep 08 2025`"
+??? quote "Python Basics | `Feb 06 2026`"
 
     ## :material-numeric-2-circle: Python Basics
 
@@ -47,7 +47,7 @@ See Course [Canvas site](https://canvas.pitt.edu/courses/324345/assignments) for
 
     * Develop original art using Google Colab and ColabTurtlePlus.
     
-??? quote "Programmatic data analysis, pattern detection, and storytelling using Python | `Sep 22 2025`"
+??? quote "Programmatic data analysis, pattern detection, and storytelling using Python | `Feb 20 2026`"
 
     ## :material-numeric-3-circle: Data Analysis using Python
 
@@ -60,7 +60,7 @@ See Course [Canvas site](https://canvas.pitt.edu/courses/324345/assignments) for
     * 3-minute story telling video 
     * Self-directed study of additional visualization tools (e.g., Plotly, Tableau, PowerBI) or modeling tools (e.g., Scikit)
 
-??? quote "Experimentation | `Oct 06 2025` "
+??? quote "Experimentation | `Mar 06 2026` "
 
     ## :material-numeric-4-circle: Experimentation
 
@@ -72,10 +72,10 @@ See Course [Canvas site](https://canvas.pitt.edu/courses/324345/assignments) for
 
     * Design an experiment Propose a causal question and a natural experiment
 
-!!! warning "Project proposal due for students aiming to complete a final course project |  `Oct 06 2025`" 
+!!! warning "Project proposal due for students aiming to complete a final course project |  `Mar 06 2026`" 
 
 
-??? quote "Programmatic data analysis, pattern detection, and storytelling using R | `Oct 20 2025`"
+??? quote "Programmatic data analysis, pattern detection, and storytelling using R | `Mar 20 2026`"
 
     ## :material-numeric-5-circle: Data Analysis using R
     Required exercises:
@@ -86,7 +86,7 @@ See Course [Canvas site](https://canvas.pitt.edu/courses/324345/assignments) for
 
     * Generate plots using R Self-directed study of regression analysis using R
 
-??? quote "Text Data | `Nov 03 2025`"
+??? quote "Text Data | `Apr 03 2026`"
 
     ## :material-numeric-6-circle: Text Data
 
@@ -98,7 +98,7 @@ See Course [Canvas site](https://canvas.pitt.edu/courses/324345/assignments) for
 
     * Conduct text mining analysis in R
 
-??? quote "AI and machine learning fairness, bias, and inclusiveness | `Nov 17 2025` "
+??? quote "AI and machine learning fairness, bias, and inclusiveness | `Apr 17 2026` "
 
     ## :material-numeric-7-circle: AI & ML: Fairness, Bias, and Inclusiveness
 
@@ -110,7 +110,7 @@ See Course [Canvas site](https://canvas.pitt.edu/courses/324345/assignments) for
 
     * Read posted research papers and answer discussion questions
 
-!!! success  "Homestretch: Complete final Project - `Dec 01 2025`"
+!!! success  "Homestretch: Complete final Project - `Apr 24 2026`"
 `
 **Notes:**
 

@@ -439,8 +439,43 @@ display(Markdown(response.text))
 By combining the user-friendly interface of AI Studio with the flexibility of the Gemini API, you can explore the full potential of generative AI and apply it to various business challenges.
 
 
+## 4. Advanced Capabilities: Agents & Interactions
+
+**4.1 From Chatbots to Agents**
+
+While a chatbot simply responds to your queries based on its training data, an **Agent** is an AI system that can actively interact with the world to complete tasks. Agents combine the reasoning capabilities of LLMs with **Tools** (like search engines, code execution, or your own APIs) to perform actions.
+
+Think of the difference this way:
+*   **Chatbot:** "I can explain how to calculate the area of a circle."
+*   **Agent:** "I have calculated the area of the circle using the radius you provided and saved the result to your spreadsheet."
+
+To build an agent, you typically need three components:
+1.  **The Brain (LLM):** Plans the steps and decides which tools to use.
+2.  **The Tools:** Functions or APIs the agent can call (e.g., `google_search`, `calculate_tax`, `send_email`).
+3.  **The Environment:** The loop that executes the tools and feeds the results back to the brain.
+
+**4.2 The Gemini Interactions API**
+
+Building agents can be complex. You often need to manage long conversation histories, orchestrate multiple tools, and handle multi-step reasoning processes. The **Gemini Interactions API** is a specialized interface designed to simplify this.
+
+Unlike the standard `generate_content` method, the Interactions API offers:
+*   **Stateful Conversations:** The server stores the conversation history. You don't need to send the full history with every request, which is faster and cheaper for long sessions.
+*   **Agentic Workflows:** It is optimized for loops where the model "thinks," calls a tool, observes the output, and then "thinks" again.
+*   **Tool Integration:** It seamlessly handles the definition and execution flow of tools, including Google Search and code execution.
+
+**4.3 Structured Output**
+
+One of the most important aspects of computational thinking with AI is ensuring reliability. When you are writing a program that uses an AI's output, you can't rely on free-form text. You need **Structured Output**.
+
+The Interactions API allows you to force the model to respond in a specific format, typically **JSON**. This means you can define a "schema" (a blueprint) for the data you want back.
+
+*   **Without Structured Output:** You ask for a list of books, and the AI says, "Sure! Here are some books: 1. The Hobbit, 2. 1984..." (Hard for a computer to read).
+*   **With Structured Output:** You provide a JSON schema for a list of book objects, and the AI returns: `[{"title": "The Hobbit", "author": "Tolkien"}, {"title": "1984", "author": "Orwell"}]`. (Easy for a computer to use).
+
+
 ## References:
 
+- [Gemini Interactions API](https://ai.google.dev/gemini-api/docs/interactions)
 - [Gemini API Reference](https://ai.google.dev/api?lang=python)
 - [Gemini Model Card](https://ai.google.dev/gemini-api/docs/models/gemini)
 - [Hugging Face Models](https://huggingface.co/models)

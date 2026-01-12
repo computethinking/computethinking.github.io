@@ -13,7 +13,7 @@ This course follows a mastery-based grading approach as summarized below. Studen
 | A- | Complete an original, novel, and high-quality final course project (See notes below).  The overall quality of the project and exercises determines “A,” “A-,” or lower.|
 | B+ | Complete all required exercises and at least 6 challenge exercises with full points on them. Complete a high-quality final course project (See notes below).  Overall quality of the deliverables determines “B+” or lower. |
 | B | Complete all required exercises and at least 4 challenge exercises with full points on them. Overall quality of the deliverables determines “B” or lower |
-| B- | Complete 5 required exercises and 2 challenge exercise with full points on them. Overall quality of the deliverables determines “B-” or lower. |
+| B- | Complete all required exercises and 2 challenge exercise with full points on them. Overall quality of the deliverables determines “B-” or lower. |
 | Cs & Ds | Not fulfilling the requirements for “B-”; inadequate performance. |
 
    

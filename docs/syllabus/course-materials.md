@@ -6,8 +6,8 @@ icon: material/bookshelf
 
 ## Course website and communication
 
-We will use the course’s [Pitt Canvas](https://canvas.pitt.edu/courses/324345) as the primary place to host course-related information. All class materials including discussions and assignments are posted on Pitt Canvas.  
-The course is designed to be completed on an asynchronous basis, and there are no mandatory weekly meetings. The instructor is available for consultations through Zoom during office hours and by appointment (**Fall 2025: Tuesday & Thursday 12:00am-2pm \+ by appointment**).
+We will use the course’s [Pitt Canvas](https://canvas.pitt.edu/) as the primary place to host course-related information. All class materials including discussions and assignments are posted on Pitt Canvas.  
+The course is designed to be completed on an asynchronous basis, and there are no mandatory weekly meetings. The instructor is available for consultations through Zoom during office hours and by appointment (**Spring 2026: Monday & Friday 12:00pm-1pm \+ by appointment**).
 
 !!! info 
 

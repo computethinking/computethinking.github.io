@@ -24,7 +24,7 @@ hide:
     ---
 
 
-    [:octicons-arrow-right-24: Instructor Info Page via Canvas](https://canvas.pitt.edu/courses/324345/pages/instructor-info-2)
+    [:octicons-arrow-right-24: Instructor Info Page via Canvas](https://canvas.pitt.edu/courses/368908/pages/instructor-info-2)
 
     [:octicons-arrow-right-24: Virtual Office via Zoom](https://pitt.zoom.us/my/midhubalan)
 
@@ -38,7 +38,7 @@ hide:
 
     [:octicons-arrow-right-24: Grading Information](syllabus/grading.md)
 
-    [:octicons-arrow-right-24: Canvas Assignment Page](https://canvas.pitt.edu/courses/324345/assignments)
+    [:octicons-arrow-right-24: Canvas Assignment Page](https://canvas.pitt.edu/courses/368908/assignments)
 
 -   :octicons-beaker-24:{ .lg .middle } __Tools__
 

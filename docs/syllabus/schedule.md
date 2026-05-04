@@ -8,20 +8,20 @@ See Course [Canvas site](https://canvas.pitt.edu/courses/324345/assignments) for
 
 <div class="annotate" markdown>
 
-| # | Topic | Date | 
+| # | Topic | Completion Date | 
 | --|:---- | :---:| 
-| 1 | Course Introduction | Jan 23 2026 |
-| 2 | Python  Basics| Feb 06 2026 | 
-| 3 | Data Analysis using Python| Feb 20 2026 | 
-| 4 | Experimentation + ==Project proposal due== | Mar 06 2026 |
-| 5 | Data Analysis using R| Mar 20 2026 | 
-| 6 | Text Data| Apr 03 2026 | 
-| 7 | AI & ML: Fairness, Bias, and Inclusiveness| Apr 17 2026 | 
-| 8 | ==Optional: Final Project== | Apr 24 2026 | 
+| 1 | Course Introduction | May 14 2026 |
+| 2 | Python  Basics| May 21 2026 | 
+| 3 | Data Analysis using Python| Jun 04 2026 | 
+| 4 | Experimentation + ==Project proposal due== | Jun 18 2026 |
+| 5 | Data Analysis using R| July 2 2026 | 
+| 6 | Text Data| July 16 2026 | 
+| 7 | AI & ML: Fairness, Bias, and Inclusiveness| July 23 2026 | 
+| 8 | ==Optional: Final Project== | July 23 2026 | 
 
 </div>
 
-??? quote "Course Introduction | `Jan 23 2026`"
+??? quote "Course Introduction | `May 14 2026`"
 
     ## :material-numeric-1-circle: Course Introduction 
 
@@ -35,7 +35,7 @@ See Course [Canvas site](https://canvas.pitt.edu/courses/324345/assignments) for
             - [NotebookLM](https://www.linkedin.com/learning/notebooklm-for-research/learning-notebooklm-for-research) for Research  
             - [NotebookLM: First Look](https://www.linkedin.com/learning/notebooklm-first-look/use-notebooklm-as-an-ai-powered-notebook-system)
     
-??? quote "Python Basics | `Feb 06 2026`"
+??? quote "Python Basics | `May 21 2026`"
 
     ## :material-numeric-2-circle: Python Basics
 
@@ -47,7 +47,7 @@ See Course [Canvas site](https://canvas.pitt.edu/courses/324345/assignments) for
 
     * Develop original art using Google Colab and ColabTurtlePlus.
     
-??? quote "Programmatic data analysis, pattern detection, and storytelling using Python | `Feb 20 2026`"
+??? quote "Programmatic data analysis, pattern detection, and storytelling using Python | `Jun 04 2026`"
 
     ## :material-numeric-3-circle: Data Analysis using Python
 
@@ -60,7 +60,7 @@ See Course [Canvas site](https://canvas.pitt.edu/courses/324345/assignments) for
     * 3-minute story telling video 
     * Self-directed study of additional visualization tools (e.g., Plotly, Tableau, PowerBI) or modeling tools (e.g., Scikit)
 
-??? quote "Experimentation | `Mar 06 2026` "
+??? quote "Experimentation | `Jun 18 2026` "
 
     ## :material-numeric-4-circle: Experimentation
 
@@ -72,10 +72,10 @@ See Course [Canvas site](https://canvas.pitt.edu/courses/324345/assignments) for
 
     * Design an experiment Propose a causal question and a natural experiment
 
-!!! warning "Project proposal due for students aiming to complete a final course project |  `Mar 06 2026`" 
+!!! warning "Project proposal due for students aiming to complete a final course project |  `Jun 18 2026`" 
 
 
-??? quote "Programmatic data analysis, pattern detection, and storytelling using R | `Mar 20 2026`"
+??? quote "Programmatic data analysis, pattern detection, and storytelling using R | `Jul 02 2026`"
 
     ## :material-numeric-5-circle: Data Analysis using R
     Required exercises:
@@ -86,7 +86,7 @@ See Course [Canvas site](https://canvas.pitt.edu/courses/324345/assignments) for
 
     * Generate plots using R Self-directed study of regression analysis using R
 
-??? quote "Text Data | `Apr 03 2026`"
+??? quote "Text Data | `July 16 2026`"
 
     ## :material-numeric-6-circle: Text Data
 
@@ -98,7 +98,7 @@ See Course [Canvas site](https://canvas.pitt.edu/courses/324345/assignments) for
 
     * Conduct text mining analysis in R
 
-??? quote "AI and machine learning fairness, bias, and inclusiveness | `Apr 17 2026` "
+??? quote "AI and machine learning fairness, bias, and inclusiveness | `July 23 2026` "
 
     ## :material-numeric-7-circle: AI & ML: Fairness, Bias, and Inclusiveness
 
@@ -110,10 +110,11 @@ See Course [Canvas site](https://canvas.pitt.edu/courses/324345/assignments) for
 
     * Read posted research papers and answer discussion questions
 
-!!! success  "Homestretch: Complete final Project - `Apr 24 2026`"
+!!! success  "Homestretch: Complete final Project - `July 23 2026`"
 `
 **Notes:**
 
 - The schedule shows a default learning pace of about 2 weeks per module, so that students get ample time for completing all assigned exercises. Students are welcome to proceed at a faster pace if desired.  
+- Please note that the modules closer to the finals week goes through some time compression to free up students during the finals week. Please take this into account when you plan your study schedule.   
 - Students aiming to complete a final project must submit a brief proposal and receive approval by the completion of Module-3.
 
